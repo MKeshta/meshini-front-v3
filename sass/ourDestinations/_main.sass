@@ -1,0 +1,81 @@
+#ourDestination
+    .continent-img-holder
+        position: relative
+        .continent-img
+            width: 100%
+            z-index: 0
+        .continent-img-filter
+            position: absolute
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            background-image: linear-gradient(rgba(20, 185, 213, 0), rgba(10, 93, 107, 0.36))
+            z-index: 1
+
+        .caption
+            position: absolute
+            left: 25px
+            bottom: 15px
+            color: white
+            z-index: 2
+            .name
+                font-weight: bold
+                font-size: 30px
+            .desciption
+                font-size: 24px 
+    .country-section
+        .country-img
+            width: 100%
+        .country-info
+            color: $darkBlue
+            .name
+                font-weight: bold
+                font-size: 25px
+            .activities
+                font-size: 15px
+            .stars
+                white-space: nowrap
+                span
+                    display: inline-block
+                    width: 20px
+                    padding-right: 3px 
+                    img
+                        width: 100%
+
+@media (max-width: 870px)
+    #ourDestination
+        .country-section
+            .country-info
+                .name
+                    font-size: 23px
+                .activities
+                    font-size: 13px
+@media (max-width: 700px)
+    #ourDestination
+        .country-section
+            .country-info
+                .name
+                    font-size: 20px
+                .activities
+                    font-size: 12px
+                .stars
+                    span
+                        width: 17px
+                        padding-right: 3px 
+                        
+
+@media (max-width: 389px)
+    #ourDestination
+        .country-section
+            .country-info
+                .name
+                    font-size: 17px
+                .activities
+                    font-size: 12px
+                .stars
+                    span
+                        width: 14px
+                        padding-right: 1px 
+                        
+                        

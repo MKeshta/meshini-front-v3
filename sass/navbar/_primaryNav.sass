@@ -1,0 +1,32 @@
+header
+    .primary-nav
+        background-color: white
+        .navbar-brand
+            .nav-logo
+                width: 80px
+        .navbar-nav
+            .nav-item
+                .nav-link
+                    color: $darkBlue
+                    font-weight: 600
+                    white-space: nowrap
+                    &:hover
+                        color: lighten($darkBlue,15%)
+@media (max-width: 885px)
+    header
+        .primary-nav
+            .navbar-brand
+                .nav-logo
+                    width: 70px
+@media (max-width: 600px)
+    header
+        .primary-nav
+            .navbar-brand
+                .nav-logo
+                    width: 60px
+@media (max-width: 991px)
+    header
+        .primary-nav
+            .navbar-brand
+                .nav-logo
+                    margin-left: 0px !important
