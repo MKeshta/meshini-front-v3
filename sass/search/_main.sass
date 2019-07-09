@@ -1,0 +1,57 @@
+#search
+    .search-wrapper
+        .bg-container
+            background-image: url('../images/backgrounds/beach island.png')
+            background-size: cover
+            background-position: center center
+            .bg-filter
+                padding-top: 7rem
+                padding-bottom: 7rem
+                background-image: linear-gradient(rgba(20, 185, 213, 0.48), rgba(10, 93, 107, 0.35))
+                .search-card-wrapper
+                    margin: 0 auto
+                    width: 80%
+                    .search-card
+                        width: 100%
+                        background-color: rgba(white,0.4)
+                        border-radius: 2px
+                        .search-form-wrapper
+                            .search-form
+                                .search-input
+                                    width: 95%
+                                    height: 50px
+                                    border: none
+                                    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.75)
+                                    // outline-color: rgba($darkBlue,0)
+                                    border-radius: 50px
+                                    padding-left: 30px
+                                    padding-right: 30px
+                                    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+                                    color: darken(#a3a3a3,1%) 
+                                    transition: all 300ms
+                                    &:focus
+                                        outline-color: rgba($darkBlue,1)
+
+                                    &::placeholder
+                                        color: #a3a3a3
+                                .btn-darkBlue
+                                    width: 95%
+                                    border: none
+                                    padding-top: 10px
+                                    padding-bottom: 10px
+                                    font-size: 17px
+                                    font-weight: bold
+@media (max-width: 630px)
+    #search
+        .search-wrapper
+            .bg-container   
+                .bg-filter
+                    .search-card-wrapper
+                        .search-card
+                            .search-form-wrapper
+                                .search-form
+                                    .search-input
+                                        font-size: 14px
+                                        height: 45px
+                                    .btn-darkBlue
+                                        font-size: 15px

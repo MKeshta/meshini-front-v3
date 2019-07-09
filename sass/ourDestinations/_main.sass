@@ -24,58 +24,155 @@
                 font-size: 30px
             .desciption
                 font-size: 24px 
-    .country-section
-        .country-img
-            width: 100%
-        .country-info
-            color: $darkBlue
-            .name
-                font-weight: bold
-                font-size: 25px
-            .activities
-                font-size: 15px
-            .stars
+    .countries-section
+        .country-section
+            .country-link 
+                text-decoration: none
+                .country-wrapper
+                    background-color: white
+                    transition: 300ms
+                    &:hover
+                        background-color: rgba(gray,0.05)
+                .country-img
+                    width: 100%
+                .country-info
+                    color: $darkBlue
+                    .name
+                        font-weight: bold
+                        font-size: 25px
+                        text-overflow: ellipsis
+                        overflow: hidden
+                        width: 100% 
+                        white-space: nowrap
+                    .activities
+                        font-size: 15px
+                    .stars
+                        white-space: nowrap
+                        span
+                            display: inline-block 
+                            width: 20px
+                            padding-right: 3px 
+                            img
+                                width: 100%
+        .show-more-cell
+            .btn-darkBlue
+                display: inline-block
+                margin-top: 10px
+                margin-right: 40px
+                padding-left: 2rem
+                padding-right: 2rem
+                padding-top: 0.5rem
+                padding-bottom: 0.5rem
                 white-space: nowrap
-                span
-                    display: inline-block
-                    width: 20px
-                    padding-right: 3px 
-                    img
-                        width: 100%
+
+@media (max-width: 1050px)
+    #ourDestination
+        .countries-section
+            .show-more-cell
+                .btn-darkBlue
+                    margin-top: 5px
+                    margin-right: 40px
+                    padding-left: 1.5rem
+                    padding-right: 1.5rem
+                    padding-top: 0.5rem
+                    padding-bottom: 0.5rem
+                    font-size: 14px
+
 
 @media (max-width: 870px)
     #ourDestination
-        .country-section
-            .country-info
-                .name
-                    font-size: 23px
-                .activities
-                    font-size: 13px
+        .countries-section
+            .country-section
+                .country-link
+                    .country-wrapper
+                        .country-info
+                            .name
+                                font-size: 23px
+                            .activities
+                                font-size: 13px
+            .show-more-cell
+                .btn-darkBlue
+                    margin-top: 4px
+                    margin-right: 60px
+                    padding-left: 1.5rem
+                    padding-right: 1.5rem
+                    padding-top: 0.4rem
+                    padding-bottom: 0.4rem
+                    font-size: 14px
+@media (max-width: 1506px)
+    #ourDestination
+        .countries-section
+            .country-section
+                .country-link
+                    .country-wrapper
+                        .country-info
+                            .name
+                                font-size: 20px
+                            .activities
+                                font-size: 12px
+@media (max-width: 767px)
+    #ourDestination
+        .countries-section
+            .show-more-cell
+                .btn-darkBlue
+                    text-align: center
+                    margin-top: 3px
+                    margin-right: 0px
+                    padding-left: 0%
+                    padding-right: 0%
+                    width: 100%
+                    padding-top: 0.5rem
+                    padding-bottom: 0.5rem
+                    font-size: 14px
+
+
+        
 @media (max-width: 700px)
     #ourDestination
-        .country-section
-            .country-info
-                .name
-                    font-size: 20px
-                .activities
-                    font-size: 12px
-                .stars
-                    span
-                        width: 17px
-                        padding-right: 3px 
-                        
+        .countries-section
+            .country-section
+                .country-link
+                    .country-wrapper
+                        .country-info
+                            .name
+                                font-size: 20px
+                            .activities
+                                font-size: 12px
+                            .stars
+                                span
+                                    width: 17px
+                                    padding-right: 3px 
+                            
+@media (max-width: 460px)
+    #ourDestination
+        .countries-section
+            .country-section
+                .country-link
+                    .country-wrapper
+                        .country-info
+                            .name
+                                font-size: 17px
+                            .activities
+                                font-size: 12px
+                            .stars
+                                span
+                                    width: 14px
+                                    padding-right: 0.1px 
 
 @media (max-width: 389px)
     #ourDestination
-        .country-section
-            .country-info
-                .name
-                    font-size: 17px
-                .activities
-                    font-size: 12px
-                .stars
-                    span
-                        width: 14px
-                        padding-right: 1px 
-                        
+        .countries-section
+            .country-section
+                .country-link
+                    .country-wrapper
+                        .country-info
+                            .name
+                                font-size: 15px
+                            .activities
+                                font-size: 12px
+                            .stars
+                                span
+                                    width: 14px
+                                    padding-right: 0.1px 
+                            
                         

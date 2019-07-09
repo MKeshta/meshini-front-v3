@@ -9655,18 +9655,43 @@ h3 {
     border-color: #dee2e6;
   }
 }
+* {
+  box-sizing: border-box;
+}
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Montserrat", sans-serif;
-  box-sizing: border-box;
 }
 
 .btn-darkBlue {
   background-color: #243666;
   color: white !important;
   border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  transition: all 200ms;
+  font-weight: bold;
+}
+.btn-darkBlue:hover {
+  background-color: #1d2c53;
+  text-decoration: none;
+}
+
+.btn-lightGray {
+  background-color: #707070;
+  color: white !important;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  transition: all 200ms;
+  font-weight: bold;
+}
+.btn-lightGray:hover {
+  background-color: #636363;
+  text-decoration: none;
 }
 
 .link:hover {
@@ -9682,6 +9707,7 @@ body, html {
 
 .section-header {
   color: #707070;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -9864,7 +9890,7 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 }
 .main-slider .carousel-wrapper #MainCarousel .carousel-inner .carousel-item .slide .circle-wrapper {
   position: absolute;
-  right: 5%;
+  right: 10%;
   top: 50%;
   transform: translate(0%, -50%);
   width: 550px;
@@ -10049,61 +10075,450 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 #ourDestination .continent-img-holder .caption .desciption {
   font-size: 24px;
 }
-#ourDestination .country-section .country-img {
+#ourDestination .countries-section .country-section .country-link {
+  text-decoration: none;
+}
+#ourDestination .countries-section .country-section .country-link .country-wrapper {
+  background-color: white;
+  transition: 300ms;
+}
+#ourDestination .countries-section .country-section .country-link .country-wrapper:hover {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+#ourDestination .countries-section .country-section .country-link .country-img {
   width: 100%;
 }
-#ourDestination .country-section .country-info {
+#ourDestination .countries-section .country-section .country-link .country-info {
   color: #243666;
 }
-#ourDestination .country-section .country-info .name {
+#ourDestination .countries-section .country-section .country-link .country-info .name {
   font-weight: bold;
   font-size: 25px;
-}
-#ourDestination .country-section .country-info .activities {
-  font-size: 15px;
-}
-#ourDestination .country-section .country-info .stars {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
   white-space: nowrap;
 }
-#ourDestination .country-section .country-info .stars span {
+#ourDestination .countries-section .country-section .country-link .country-info .activities {
+  font-size: 15px;
+}
+#ourDestination .countries-section .country-section .country-link .country-info .stars {
+  white-space: nowrap;
+}
+#ourDestination .countries-section .country-section .country-link .country-info .stars span {
   display: inline-block;
   width: 20px;
   padding-right: 3px;
 }
-#ourDestination .country-section .country-info .stars span img {
+#ourDestination .countries-section .country-section .country-link .country-info .stars span img {
   width: 100%;
 }
+#ourDestination .countries-section .show-more-cell .btn-darkBlue {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 40px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  white-space: nowrap;
+}
 
+@media (max-width: 1050px) {
+  #ourDestination .countries-section .show-more-cell .btn-darkBlue {
+    margin-top: 5px;
+    margin-right: 40px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
+  }
+}
 @media (max-width: 870px) {
-  #ourDestination .country-section .country-info .name {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .name {
     font-size: 23px;
   }
-  #ourDestination .country-section .country-info .activities {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .activities {
     font-size: 13px;
+  }
+  #ourDestination .countries-section .show-more-cell .btn-darkBlue {
+    margin-top: 4px;
+    margin-right: 60px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-size: 14px;
+  }
+}
+@media (max-width: 1506px) {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .name {
+    font-size: 20px;
+  }
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .activities {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  #ourDestination .countries-section .show-more-cell .btn-darkBlue {
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 0px;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
   }
 }
 @media (max-width: 700px) {
-  #ourDestination .country-section .country-info .name {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .name {
     font-size: 20px;
   }
-  #ourDestination .country-section .country-info .activities {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .activities {
     font-size: 12px;
   }
-  #ourDestination .country-section .country-info .stars span {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .stars span {
     width: 17px;
     padding-right: 3px;
   }
 }
-@media (max-width: 389px) {
-  #ourDestination .country-section .country-info .name {
+@media (max-width: 460px) {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .name {
     font-size: 17px;
   }
-  #ourDestination .country-section .country-info .activities {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .activities {
     font-size: 12px;
   }
-  #ourDestination .country-section .country-info .stars span {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .stars span {
     width: 14px;
-    padding-right: 1px;
+    padding-right: 0.1px;
+  }
+}
+@media (max-width: 389px) {
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .name {
+    font-size: 15px;
+  }
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .activities {
+    font-size: 12px;
+  }
+  #ourDestination .countries-section .country-section .country-link .country-wrapper .country-info .stars span {
+    width: 14px;
+    padding-right: 0.1px;
+  }
+}
+#search .search-wrapper .bg-container {
+  background-image: url("../images/backgrounds/beach island.png");
+  background-size: cover;
+  background-position: center center;
+}
+#search .search-wrapper .bg-container .bg-filter {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-image: linear-gradient(rgba(20, 185, 213, 0.48), rgba(10, 93, 107, 0.35));
+}
+#search .search-wrapper .bg-container .bg-filter .search-card-wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+#search .search-wrapper .bg-container .bg-filter .search-card-wrapper .search-card {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+}
+#search .search-wrapper .bg-container .bg-filter .search-card-wrapper .search-card .search-form-wrapper .search-form .search-input {
+  width: 95%;
+  height: 50px;
+  border: none;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  color: #a0a0a0;
+  transition: all 300ms;
+}
+#search .search-wrapper .bg-container .bg-filter .search-card-wrapper .search-card .search-form-wrapper .search-form .search-input:focus {
+  outline-color: #243666;
+}
+#search .search-wrapper .bg-container .bg-filter .search-card-wrapper .search-card .search-form-wrapper .search-form .search-input::placeholder {
+  color: #a3a3a3;
+}
+#search .search-wrapper .bg-container .bg-filter .search-card-wrapper .search-card .search-form-wrapper .search-form .btn-darkBlue {
+  width: 95%;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+@media (max-width: 630px) {
+  #search .search-wrapper .bg-container .bg-filter .search-card-wrapper .search-card .search-form-wrapper .search-form .search-input {
+    font-size: 14px;
+    height: 45px;
+  }
+  #search .search-wrapper .bg-container .bg-filter .search-card-wrapper .search-card .search-form-wrapper .search-form .btn-darkBlue {
+    font-size: 15px;
+  }
+}
+#about-us .about-us-section .img-wrapper .about-us-img {
+  width: 100%;
+}
+#about-us .about-us-section .text-wrapper {
+  margin-top: 2rem;
+  color: #243666;
+}
+#about-us .about-us-section .text-wrapper .secondary-header {
+  font-weight: bold;
+}
+#about-us .about-us-section .text-wrapper .paragraphs {
+  width: 95%;
+  padding-left: 0.5rem;
+  font-size: 15px;
+}
+#about-us .about-us-section .text-wrapper .paragraphs p {
+  text-align: justify;
+}
+
+@media (max-width: 550px) {
+  #about-us .about-us-section .text-wrapper {
+    margin-top: 1rem;
+  }
+  #about-us .about-us-section .text-wrapper .secondary-header {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  #about-us .about-us-section .text-wrapper .paragraphs {
+    width: 95%;
+    padding-left: 0.5rem;
+    font-size: 13px;
+  }
+  #about-us .about-us-section .text-wrapper .paragraphs p {
+    text-align: justify;
+  }
+}
+#local-expert .local-expert-wrapper .local-expert-section {
+  height: 100%;
+  color: #707070;
+}
+#local-expert .local-expert-wrapper .local-expert-section .local-expert-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+#local-expert .local-expert-wrapper .local-expert-section .local-expert-img-wrapper img {
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+}
+#local-expert .local-expert-wrapper .local-expert-section .bg-gradient {
+  height: 100%;
+  background: radial-gradient(circle, #eee5e3 0%, #bfbfbf 100%);
+}
+#local-expert .local-expert-wrapper .local-expert-section .bg-gradient .header {
+  font-size: 30px;
+  font-weight: bold;
+}
+#local-expert .local-expert-wrapper .local-expert-section .bg-gradient .paragraphs {
+  font-size: 15px;
+  padding-top: 1rem;
+  font-weight: 600;
+}
+#local-expert .local-expert-wrapper .local-expert-section .bg-gradient .downlaod-app .download-btn-wrapper .app-link img {
+  width: 200px;
+}
+
+@media (max-width: 1700px) {
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .header {
+    font-size: 25px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .paragraphs {
+    font-size: 13px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .downlaod-app .download-btn-wrapper .app-link img {
+    width: 160px;
+  }
+}
+@media (max-width: 1383px) {
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .header {
+    font-size: 20px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .paragraphs {
+    padding-top: 0.25rem;
+    font-size: 12px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .downlaod-app .download-btn-wrapper .app-link img {
+    width: 130px;
+  }
+}
+@media (max-width: 1145px) {
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .header {
+    font-size: 18px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .paragraphs {
+    padding-top: 0.25rem;
+    font-size: 12px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .downlaod-app .download-btn-wrapper .app-link img {
+    width: 130px;
+  }
+}
+@media (max-width: 527px) {
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .header {
+    font-size: 16px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .paragraphs {
+    padding-top: 0.25rem;
+    font-size: 11px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .downlaod-app .download-btn-wrapper .app-link img {
+    width: 110px;
+  }
+}
+@media (max-width: 411px) {
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .header {
+    font-size: 16px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .paragraphs {
+    padding-top: 0.25rem;
+    font-size: 9px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .downlaod-app .download-btn-wrapper .app-link img {
+    width: 110px;
+  }
+}
+@media (max-width: 357px) {
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .header {
+    font-size: 14px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .paragraphs {
+    padding-top: 0.25rem;
+    font-size: 9px;
+  }
+  #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .downlaod-app .download-btn-wrapper .app-link img {
+    width: 80px;
+  }
+}
+#subscribe .bg-gradient {
+  background: radial-gradient(circle, #eee5e3 0%, #bfbfbf 100%);
+}
+#subscribe .bg-gradient .subscribe-section {
+  white-space: nowrap;
+}
+#subscribe .bg-gradient .subscribe-section .inv-icon {
+  margin-left: 6rem;
+  margin-top: -40px;
+  width: 90px;
+}
+#subscribe .bg-gradient .subscribe-section .text-wrapper {
+  display: inline-block;
+  margin-left: 2.5rem;
+  color: #707070;
+}
+#subscribe .bg-gradient .subscribe-section .text-wrapper .secondary-header {
+  font-size: 29px;
+  font-weight: bold;
+}
+#subscribe .bg-gradient .subscribe-section .text-wrapper .text {
+  font-size: 23px;
+}
+#subscribe .bg-gradient .subscribe-section .subscribe-form .subscibe-input {
+  border-radius: 50px;
+  height: 50px;
+  padding-left: 20px;
+}
+#subscribe .bg-gradient .subscribe-section .subscribe-form .subscibe-input::placeholder {
+  color: #707070;
+}
+#subscribe .bg-gradient .subscribe-section .subscribe-form .subscibe-input:focus {
+  border-color: #707070;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(112, 112, 112, 0.25);
+}
+
+@media (max-width: 1527px) {
+  #subscribe .bg-gradient .subscribe-section .inv-icon {
+    margin-left: 3rem;
+    margin-top: -40px;
+    width: 90px;
+  }
+}
+@media (max-width: 1270px) {
+  #subscribe .bg-gradient .subscribe-section .inv-icon {
+    margin-left: 2rem;
+    margin-top: -40px;
+    width: 50px;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper {
+    margin-left: 2.5rem;
+    color: #707070;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper .secondary-header {
+    font-size: 25px;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper .text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 991px) {
+  #subscribe .bg-gradient {
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+  }
+  #subscribe .bg-gradient .subscribe-section .inv-icon {
+    margin-left: 0rem;
+    margin-top: -40px;
+    width: 50px;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper {
+    margin-left: 2.5rem;
+    color: #707070;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper .secondary-header {
+    font-size: 25px;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper .text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  #subscribe .bg-gradient {
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+  }
+  #subscribe .bg-gradient .subscribe-section {
+    white-space: normal;
+  }
+  #subscribe .bg-gradient .subscribe-section .inv-icon {
+    margin-left: 0rem;
+    margin-top: -40px;
+    width: 40px;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper {
+    margin-left: 0rem;
+    color: #707070;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper .secondary-header {
+    font-size: 19px;
+  }
+  #subscribe .bg-gradient .subscribe-section .text-wrapper .text {
+    font-size: 17px;
+  }
+  #subscribe .bg-gradient .subscribe-section .subscribe-form .subscibe-input {
+    height: 40px;
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  #subscribe .bg-gradient .subscribe-section .subscribe-form .subscibe-input::placeholder {
+    color: #707070;
+  }
+  #subscribe .bg-gradient .subscribe-section .subscribe-form .subscibe-input:focus {
+    border-color: #707070;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(112, 112, 112, 0.25);
   }
 }
 
