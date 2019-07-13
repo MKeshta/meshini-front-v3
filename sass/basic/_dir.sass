@@ -27,6 +27,29 @@ body,html
     &:hover
         background-color: darken($lightGray,5%)
         text-decoration: none
+.btn-white
+    background-color: white
+    color: $lightGray !important
+    border-radius: 50px
+    border: 1px solid $terqwaz
+    text-decoration: none
+    transition: all 200ms
+    font-weight: bold
+    &:hover
+        background-color: darken($white,15%)
+        text-decoration: none
+.btn-darkBlue-outline
+    background-color: transparent
+    color: $darkBlue 
+    border-radius: 50px
+    border: 2px solid $darkBlue
+    text-decoration: none
+    transition: all 200ms
+    font-weight: bold
+    &:hover
+        background-color: $darkBlue
+        color: white
+        text-decoration: none
 .link
     &:hover
         color: black !important
@@ -37,7 +60,9 @@ body,html
     width: 100%
     box-shadow:  0px 1px 11px -4px rgba(0,0,0,0.75)
 
-.section-header
+.section-header 
     color: #707070
     font-weight: bold
     text-align: center
+.lcl_icon
+    display: none !important

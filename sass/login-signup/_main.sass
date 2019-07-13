@@ -1,0 +1,75 @@
+.bg-beach
+    .content-wrapper
+        min-height: 75vh
+        #form-container
+            color: white
+            text-align: center
+            .form-card
+                .header
+                    font-weight: bold
+                    font-size: 32px
+                .form
+                    margin-top: 20px
+                    .form-input
+                        height: 50px
+                        margin-top: 1rem
+                        border-radius: 30px
+                        padding-left: 30px
+                        border: 1px solid $terqwaz
+                        font-size: 15px
+                        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+                        &:placeholder
+                            color: rgba($lightGray,0.5)
+                    .forget-password
+                        display: inline-block
+                        color: white
+                        font-weight: bold
+                        font-size: 15px
+                        text-decoration: underline
+                        margin-top: 1rem
+                    .form-btn-wrapper
+                        margin-top: 1rem
+                        button
+                            padding-left: 3rem
+                            padding-right: 3rem
+                            padding-bottom: 0.5rem
+                            padding-top: 0.5rem
+                            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+                .bordered-label
+                    position: relative
+                    padding-left: 3rem
+                    padding-right: 3rem
+                    &:after,&:before
+                        content: ''
+                        position: absolute
+                        width: 2.9rem
+                        height: 2px
+                        background-color: $terqwaz
+                        top: 50%
+                        transform: translate(0%,-50%)
+                    &:after
+                        left: -10px
+                    &:before
+                        right: -10px
+@media (max-width: 1200px)
+    .bg-beach
+        .content-wrapper
+            #form-container
+                .form-card
+                    .bordered-label
+                        padding-left: 2rem
+                        padding-right: 2rem
+                        &:after,&:before
+                            width: 1.9rem
+@media (max-width: 532px)
+    .bg-beach
+        .content-wrapper
+            #form-container
+                .form-card
+                    font-size: 13px
+                    .header
+                        font-size: 28px
+                    .form
+                        margin-top: 15px
+                        .form-input
+                            height: 40px

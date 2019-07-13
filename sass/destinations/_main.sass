@@ -3,7 +3,11 @@
         .destination
             margin-top: 1rem
             .destination-link
+                background-color: white
                 text-decoration: none
+                transition: all 300ms
+                &:hover
+                    background-color: rgba(gray,1)
                 .destination-img-holder
                     .destination-img
                         width: 100%
@@ -14,6 +18,110 @@
                         font-weight: bold
                     .description
                         font-size: 15px
+                    
             &:hover
                 .destination-text
                     color: lighten($darkBlue,5%)
+
+@media (max-width: 1600px) 
+    #Destinations
+        .descriptions-wrapper
+            .destination
+                .destination-link
+                        .destination-text
+                            .name
+                                font-size: 20px
+                            .description
+                                font-size: 13px
+@media (max-width: 1350px)
+    #Destinations
+        .descriptions-wrapper
+            .destination
+                .destination-link
+                        .destination-text
+                            .name
+                                font-size: 18px
+                            .description
+                                font-size: 11px
+
+@media (max-width: 1235px)
+    #Destinations
+        .descriptions-wrapper
+            .destination
+                .destination-link
+                        .destination-text
+                            .name
+                                font-size: 15px
+                            .description
+                                font-size: 11px
+@media (max-width: 991px)
+    #Destinations
+        .descriptions-wrapper
+            .destination
+                .destination-link
+                        .destination-text
+                            .name
+                                font-size: 18px
+                            .description
+                                font-size: 11px
+    #country-labels
+        text-align: center
+        .country-labels-wrapper
+            margin-right: auto
+            .country-label
+                padding: 1rem
+                background-color: white
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+                img
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%,-50%)
+                    // width: 90%
+                    height: 65%
+@media (max-width: 630px)
+    #country-labels
+        margin-top: -32px
+        .country-labels-wrapper
+            margin-right: auto
+            .country-label
+                width: 70px
+                height: 70px
+                padding: 1rem
+                background-color: white
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+                img
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%,-50%)
+                    // width: 90%
+                    height: 65%
+
+@media (max-width:  395px)
+    #Destinations
+        .descriptions-wrapper
+            .destination
+                .destination-link
+                        .destination-text
+                            .name
+                                font-size: 15px
+                            .description
+                                font-size: 11px
+    #country-labels
+        margin-top: -32px
+        .country-labels-wrapper
+            margin-right: auto
+            .country-label
+                width: 60px
+                height: 60px
+                padding: 1rem
+                background-color: white
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+                img
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%,-50%)
+                    // width: 90%
+                    height: 65%

@@ -1,0 +1,46 @@
+#country-labels
+    text-align: right
+    margin-top: -50px
+    white-space: nowrap
+    .country-labels-wrapper
+        display: inline-block
+        margin-right: 10rem
+        .country-label
+            display: inline-block
+            position: relative
+            margin-left: 0.5rem
+            margin-right: 0.5rem
+            width: 100px
+            height: 100px
+            background-color: white
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+            img
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%,-50%)
+                height: 65%
+@media (max-width: 1350px)
+    #country-labels
+        .country-labels-wrapper
+            .country-label
+                width: 80px
+                height: 80px
+
+@media (max-width: 991px)
+    #country-labels
+        text-align: center
+        margin-top: -20px
+        .country-labels-wrapper
+            margin-right: auto
+            
+
+@media (max-width:  395px)
+    #country-labels
+        margin-top: -32px
+        .country-labels-wrapper
+            margin-right: auto
+            .country-label
+                width: 60px
+                height: 60px
+                
