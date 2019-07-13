@@ -1,0 +1,245 @@
+#footer
+    .footer-wrapper
+            .footer-card-holder
+                .footer-card
+                    .footer-card-body
+                        .footer-section
+                            color: $darkBlue 
+                            .footer-main-header                    
+                                display: inline-block
+                                font-size: 28px
+                                font-weight: bold
+                                padding-bottom: 10px
+                                border-bottom: 2px solid $darkBlue
+                            .bordered-cell
+                                position: relative
+                                &:after
+                                    content: ' '
+                                    position: absolute
+                                    top: 0
+                                    left: -50px
+                                    height: 100%
+                                    width: 2px
+                                    background-color: $darkBlue
+
+                            .footer-cell
+                                margin-top: 1rem
+                                font-size: 15px
+                                font-weight: bold
+                                .cell-body
+                                    white-space: nowrap
+                                    a
+                                        display: block
+                                        margin-top: 0.25rem
+                                        color: $darkBlue
+                                        text-decoration: none
+                                        &:hover
+                                            color: lighten($darkBlue,25%)
+                                    .footer-social , .footer-appStore
+                                        display: inline-block
+                                    .footer-social
+                                        &:not(:first-child)
+                                            padding-left: 10px
+                                        img
+                                            width: 28px
+                                    .footer-appStore
+                                        img
+                                            width: 180px
+                                .lang-btn
+                                    background-color: transparent
+                                    border: 2px solid $darkBlue
+                                    color: $darkBlue
+                                    box-shadow: 0px 0px 0px
+                                    transition: all 300ms
+                                    border-radius: 8px
+                                    font-size: 14px
+                                    font-weight: bold
+                                    &:hover
+                                        background-color: rgba($darkBlue,0.1)
+                                    &:focus
+                                        background-color: transparent
+                                        box-shadow: 0 0 0 0.2rem rgba($darkBlue, 0.25)
+
+@media (max-width: 1370px)
+    #footer
+        .footer-bg-img
+            .footer-wrapper
+                    .footer-card-holder
+                        .footer-card
+                            .footer-section
+                                .footer-main-header 
+                                    font-size: 20px
+                                .footer-cell
+                                    font-size: 13px
+                                    .cell-body
+                                        .footer-appStore
+                                            img
+                                                width: 140px
+                                        .lang-btn
+                                            font-size: 12px
+
+@media (max-width: 1140px)
+    #footer
+        .footer-bg-img
+            .footer-bg-filter
+                .footer-wrapper
+                    padding-top: 5rem
+                    padding-bottom: 5rem
+                    .footer-card-holder
+                        .footer-card
+                            .footer-card-body
+                                padding: 2rem 7rem 2rem 7rem
+                                .footer-section
+                                    .footer-main-header 
+                                        font-size: 20px
+                                    .footer-cell
+                                        font-size: 13px
+                                        margin-top: 0.75rem
+                                        .cell-body
+                                            .footer-social
+                                                img
+                                                    width: 20px 
+                                            .footer-appStore
+                                                img
+                                                    width: 120px
+                                            .lang-btn
+                                                font-size: 11px
+                                            .lang-option
+                                                font-size: 13px
+@media (max-width: 710px)
+    #footer
+        .footer-bg-img
+            .footer-bg-filter
+                .footer-wrapper
+                    padding-top: 3rem
+                    padding-bottom: 3rem
+                    .footer-card-holder
+                        width: 90%
+                        .footer-card
+                            .footer-card-body
+                                padding: 2rem 5rem 2rem 5rem
+                                .footer-section
+                                    .footer-main-header 
+                                        font-size: 17px
+                                    .footer-cell
+                                        font-size: 11px
+                                        margin-top: 0.75rem
+                                        .cell-body
+                                            .footer-social
+                                                img
+                                                    width: 18px
+                                            .footer-appStore
+                                                img
+                                                    width: 90px
+                                            .lang-btn
+                                                font-size: 9px
+
+@media (max-width: 540px)
+    #footer
+        .footer-bg-img
+            .footer-bg-filter
+                .footer-wrapper
+                    padding-top: 1rem
+                    padding-bottom: 1rem
+                    .footer-card-holder
+                        width: 95%
+                        .footer-card
+                            .footer-card-body
+                                padding: 1rem 3rem 1rem 3rem
+                                .footer-section
+                                    .footer-main-header 
+                                        font-size: 16px
+                                    .bordered-cell
+                                        &:after
+                                            left: -20px
+                                            height: 80%
+                                            top: auto
+                                            bottom: 0
+                                    .footer-cell
+                                        font-size: 10px
+                                        margin-top: 0.2rem
+                                        .cell-body
+                                            .footer-social
+                                                img
+                                                    width: 16px
+                                            .footer-appStore
+                                                img
+                                                    width: 85px
+                                            .lang-btn
+                                                font-size: 9px
+
+
+@media (max-width: 460px)
+    #footer
+        .footer-bg-img
+            .footer-bg-filter
+                .footer-wrapper
+                    padding-top: 1rem
+                    padding-bottom: 1rem
+                    .footer-card-holder
+                        width: 95%
+                        .footer-card
+                            .footer-card-body
+                                padding: 1rem 2rem 1rem 2rem
+                                .last-col
+                                    margin-top: -25px !important
+                                .footer-section
+                                    .footer-main-header 
+                                        font-size: 14px
+                                    .bordered-cell
+                                        &:after
+                                            left: -20px
+                                            height: 80%
+                                            top: auto
+                                            bottom: 0
+                                    .footer-cell
+                                        font-size: 10px
+                                        margin-top: 0.2rem
+                                        .cell-body
+                                            .footer-social
+                                                img
+                                                    width: 16px
+                                            .footer-appStore
+                                                display: block
+                                                margin-left: -0px !important
+                                                img
+                                                    width: 85px
+                                            .lang-btn
+                                                font-size: 9px
+@media (max-width: 363px)
+    #footer
+        .footer-bg-img
+            .footer-bg-filter
+                .footer-wrapper
+                    padding-top: 0.4rem
+                    padding-bottom: 0.4rem
+                    .footer-card-holder
+                        width: 97%
+                        .footer-card
+                            .footer-card-body
+                                padding: 1rem 1.5rem 1rem 1.5rem
+                                .last-col
+                                    margin-top: -25px !important
+                                .footer-section
+                                    .footer-main-header 
+                                        font-size: 13px
+                                    .bordered-cell
+                                        &:after
+                                            left: -20px
+                                            height: 80%
+                                            top: auto
+                                            bottom: 0
+                                    .footer-cell
+                                        font-size: 10px
+                                        margin-top: 0.2rem
+                                        .cell-body
+                                            .footer-social
+                                                img
+                                                    width: 16px
+                                            .footer-appStore
+                                                display: block
+                                                margin-left: -0px !important
+                                                img
+                                                    width: 85px
+                                            .lang-btn
+                                                font-size: 9px
