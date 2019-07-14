@@ -1,0 +1,227 @@
+#signup
+    .bg-beach
+        .content-wrapper
+            #form-container
+                #signup-form-wrapper
+                    .form-card
+                        width: 40%
+                        position: relative
+                        .prev-btn-wrapper
+                            position: absolute
+                            top: 1.5rem
+                            left: 1rem
+                            font-weight: bold
+                            .prev-btn
+                                cursor: pointer
+                                -webkit-user-select: none
+                                -moz-user-select: none 
+                                -ms-user-select: none
+                                user-select: none
+                            .icon
+                                width: 13px
+                                margin-right: 10px
+                                img
+                                    width: 100%
+                            a
+                                color: white
+                        .signup-pages-wrapper
+                            position: relative
+                            overflow: hidden
+                            z-index: 1
+                            .signup-page
+                                position: absolute
+                                width: 100% 
+                                transition: left 300ms
+                                &.active
+                                    left: 0%
+                                &.prev
+                                    left: -110%
+                                &.next
+                                    left: 110%
+                                .signup-page-header
+                                    font-size: 26px
+                                    margin-top: 1.5rem
+                                label
+                                    &.form-input
+                                        padding-top: 0.5rem
+                                        padding-bottom: 0.5rem
+                                        display: flex
+                                        justify-content: space-between
+                                        align-items: center
+                                        flex-direction: row
+                                        position: relative
+                                        overflow: hidden
+                                        
+                                        .loader
+                                            position: absolute
+                                            left: 0
+                                            top: 0
+                                            bottom: 0
+                                            z-index: 1
+                                            background-color: rgba($darkBlue,1)
+                                        .loading-percentage
+                                            z-index: 2
+                                            color: black
+                                            margin-right: 1rem
+                                        .filename
+                                            display: inline-block
+                                            color: rgba($lightGray,0.5)
+                                            text-align: start
+                                            text-overflow: ellipsis
+                                            overflow: hidden 
+                                            width: 100%
+                                            white-space: nowrap
+                                            z-index: 2
+                                        .img-holder
+                                            width: 35px
+                                            margin-right: 2rem
+                                            z-index: 2
+                                            img 
+                                                width: 100%
+                                                opacity: 0.7
+                                        &:hover
+                                            .img-holder
+                                                img
+                                                    opacity: 1
+                                .form-input
+                                    margin-top: 3rem
+                                    margin-bottom: 3rem
+                               
+                        .submit-btn-wrapper
+                             .btn-white
+                                font-size: 20px 
+                                cursor: pointer
+                                -webkit-user-select: none
+                                -moz-user-select: none 
+                                -ms-user-select: none
+                                user-select: none
+                        .step-tracker
+                            font-weight: bold
+
+@media (max-width: 1450px)
+    #signup
+        .bg-beach
+            .content-wrapper
+                #form-container
+                    #signup-form-wrapper
+                        .form-card
+                            width: 60%
+                
+@media (max-width: 1250px)
+    #signup
+        .bg-beach
+            .content-wrapper
+                #form-container
+                    #signup-form-wrapper
+                        .form-card
+                            width: 60%
+                            .header
+                                font-size: 30px
+                            .signup-pages-wrapper
+                                .signup-page
+                                    .form-input
+                                        margin-top: 2rem
+                                        margin-bottom: 2rem
+@media (max-width: 950px)
+    #signup
+        .bg-beach
+            .content-wrapper
+                #form-container
+                    #signup-form-wrapper
+                        .form-card
+                            width: 75%
+                            .header
+                                font-size: 28px
+                            .signup-pages-wrapper
+                                .signup-page
+                                    .signup-page-header
+                                        font-size: 23px
+                                    .form-input
+                                        margin-top: 2rem
+                                        margin-bottom: 2rem
+
+@media (max-width: 700px)
+    #signup
+        .bg-beach
+            .content-wrapper
+                #form-container
+                    #signup-form-wrapper
+                        .form-card
+                            width: 75%
+                            .header
+                                font-size: 28px
+                            .signup-pages-wrapper
+                                .signup-page
+                                    .signup-page-header
+                                        font-size: 20px
+                                    .form-input
+                                        margin-top: 2rem
+                                        margin-bottom: 2rem
+                            .submit-btn-wrapper
+                                .btn-white
+                                    font-size: 16px 
+@media (max-width: 566px)
+    #signup
+        .bg-beach
+            .content-wrapper
+                #form-container
+                    #signup-form-wrapper
+                        .form-card
+                            width: 85%
+                            .header
+                                font-size: 25px
+                            .signup-pages-wrapper
+                                .signup-page
+                                    .signup-page-header
+                                        font-size: 20px
+                                    .form-input
+                                        margin-top: 2rem
+                                        margin-bottom: 2rem
+                            .submit-btn-wrapper
+                                .btn-white
+                                    font-size: 16px 
+@media (max-width: 477px)
+    #signup
+        .bg-beach
+            .content-wrapper
+                #form-container
+                    #signup-form-wrapper
+                        .form-card
+                            width: 85%
+                            .header
+                                font-size: 22px
+                                margin-top: 2rem
+                            .signup-pages-wrapper
+                                .signup-page
+                                    .signup-page-header
+                                        font-size: 14px
+                                        margin-top: 0.5rem
+                                    .form-input
+                                        margin-top: 1rem
+                                        margin-bottom: 1rem
+                                    label
+                                        &.form-input
+                                            .img-holder
+                                                margin-right: 1rem
+                                                width: 27px
+                            .submit-btn-wrapper
+                                .btn-white
+                                    font-size: 16px 
+@media (max-width: 344px)
+      #signup
+        .bg-beach
+            .content-wrapper
+                #form-container
+                    #signup-form-wrapper
+                        .form-card
+                            width: 85%
+                            .header
+                                font-size: 22px
+                                margin-top: 2rem
+                            .signup-pages-wrapper
+                                .signup-page
+                                    .signup-page-header
+                                        text-overflow: ellipsis
+                                        overflow: hidden 
+                                        width: 100%
+                                        white-space: nowrap

@@ -11271,6 +11271,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   color: white;
   text-align: center;
 }
+.bg-beach .content-wrapper #form-container .form-card {
+  margin: 4rem auto;
+}
 .bg-beach .content-wrapper #form-container .form-card .header {
   font-weight: bold;
   font-size: 32px;
@@ -11287,7 +11290,7 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   font-size: 15px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
-.bg-beach .content-wrapper #form-container .form-card .form .form-input:placeholder {
+.bg-beach .content-wrapper #form-container .form-card .form .form-input::placeholder {
   color: rgba(112, 112, 112, 0.5);
 }
 .bg-beach .content-wrapper #form-container .form-card .form .forget-password {
@@ -11354,7 +11357,6 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 }
 #login #login-form-wrapper .bluered-card {
   width: 50%;
-  margin: 4rem auto;
 }
 #login #login-form-wrapper .bluered-card .connect-with .social-media-btn img {
   width: 40%;
@@ -11364,9 +11366,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 }
 #login .circle-wrapper {
   position: absolute;
-  right: 10%;
+  left: 50%;
   top: 50%;
-  transform: translate(0%, -50%);
+  transform: translate(-50%, -50%);
   width: 500px;
   height: 500px;
 }
@@ -11375,7 +11377,6 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   height: 100%;
   border-radius: 50%;
   background-color: rgba(128, 128, 128, 0.32);
-  box-shadow: 2px 3px 13px -4px rgba(128, 128, 168, 0.75);
 }
 #login .circle-wrapper .circle .circle-list {
   height: 80%;
@@ -11398,6 +11399,7 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: rgba(36, 54, 102, 0);
+  box-shadow: 2px 3px 13px -4px rgba(128, 128, 168, 0.75);
   transition: all 300ms;
 }
 #login .circle-wrapper .circle .circle-list .circle-list-item .btn-white-outline:hover {
@@ -11579,6 +11581,224 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   #login #login-form-wrapper .bluered-card {
     width: 100%;
     margin: 1.5rem auto;
+  }
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card {
+  width: 40%;
+  position: relative;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .prev-btn-wrapper {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  font-weight: bold;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .prev-btn-wrapper .prev-btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .prev-btn-wrapper .icon {
+  width: 13px;
+  margin-right: 10px;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .prev-btn-wrapper .icon img {
+  width: 100%;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .prev-btn-wrapper a {
+  color: white;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page {
+  position: absolute;
+  width: 100%;
+  transition: left 300ms;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.active {
+  left: 0%;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.prev {
+  left: -110%;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.next {
+  left: 110%;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .signup-page-header {
+  font-size: 26px;
+  margin-top: 1.5rem;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page label.form-input {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page label.form-input .loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #243666;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page label.form-input .loading-percentage {
+  z-index: 2;
+  color: black;
+  margin-right: 1rem;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page label.form-input .filename {
+  display: inline-block;
+  color: rgba(112, 112, 112, 0.5);
+  text-align: start;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  z-index: 2;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page label.form-input .img-holder {
+  width: 35px;
+  margin-right: 2rem;
+  z-index: 2;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page label.form-input .img-holder img {
+  width: 100%;
+  opacity: 0.7;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page label.form-input:hover .img-holder img {
+  opacity: 1;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .form-input {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .submit-btn-wrapper .btn-white {
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .step-tracker {
+  font-weight: bold;
+}
+
+@media (max-width: 1450px) {
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card {
+    width: 60%;
+  }
+}
+@media (max-width: 1250px) {
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card {
+    width: 60%;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .header {
+    font-size: 30px;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .form-input {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 950px) {
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card {
+    width: 75%;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .header {
+    font-size: 28px;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .signup-page-header {
+    font-size: 23px;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .form-input {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card {
+    width: 75%;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .header {
+    font-size: 28px;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .signup-page-header {
+    font-size: 20px;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .form-input {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .submit-btn-wrapper .btn-white {
+    font-size: 16px;
+  }
+}
+@media (max-width: 566px) {
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card {
+    width: 85%;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .header {
+    font-size: 25px;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .signup-page-header {
+    font-size: 20px;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .form-input {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .submit-btn-wrapper .btn-white {
+    font-size: 16px;
+  }
+}
+@media (max-width: 477px) {
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card {
+    width: 85%;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .header {
+    font-size: 22px;
+    margin-top: 2rem;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .signup-page-header {
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .form-input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page label.form-input .img-holder {
+    margin-right: 1rem;
+    width: 27px;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .submit-btn-wrapper .btn-white {
+    font-size: 16px;
+  }
+}
+@media (max-width: 344px) {
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card {
+    width: 85%;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .header {
+    font-size: 22px;
+    margin-top: 2rem;
+  }
+  #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .signup-page-header {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
   }
 }
 
