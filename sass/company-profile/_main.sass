@@ -1,0 +1,89 @@
+#company-profile
+    .company-work-details-wrapper
+        position: relative
+        .bg-beach
+            position: absolute
+            top: 0
+            left: 0
+            height: 45vh
+            width: 100%
+            background-image: url('../images/backgrounds/waves.png')
+            z-index: -1
+            .bg-fillter
+                background-image: linear-gradient(rgba(20, 185, 213, 0), rgba(10, 93, 107, 0.36))
+                height: 100%
+                z-index: 1
+                padding-top: 3rem
+        .content-wrapper
+            padding: 2rem 10% 2rem 10%
+            .tabs-wrapper
+                background-color: rgba(0, 0, 0, 0.16)
+                padding: 0 0 2rem 0
+                .nav
+                    .nav-item
+                        .nav-link
+                            text-align: center
+                            border-radius: 0px
+                            color: $darkBlue
+                            background-color: #e5e5e5
+                            padding: 1rem 0rem 1rem 0rem
+                            font-weight: 600
+                            transition: all 250ms
+                            &:hover
+                                background-color: darken(#e5e5e5,5%)
+                            &.active
+                                background-color: white
+                .tab-content
+                    .tab-pane
+                        .cards-wrapper
+                            .white-card
+                                margin: 0 auto
+                                background-color: white
+                                border-radius: 20px
+                                margin-top: 1rem
+                                padding: 0.25rem 0.25rem 0.25rem 0.25rem
+                                color: $darkBlue
+                                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16)
+                            .col-12
+                                .white-card
+                                    width: 50%
+                            .col-6
+                                .white-card
+                                    width: 100%
+
+@media (max-width: 1145px)
+    #company-profile
+       .company-work-details-wrapper
+           .content-wrapper
+               padding: 2rem 5% 2rem 5%
+    
+@media (max-width: 768px)
+    #company-profile
+        .company-work-details-wrapper
+            .content-wrapper
+                .tabs-wrapper
+                    .nav
+                        .nav-item
+                            .nav-link
+                                font-size: 13px 
+                                padding: 0.75rem 0rem 0.75rem 0rem
+@media (max-width: 500px)
+    #company-profile
+        .company-work-details-wrapper
+            .content-wrapper
+                .tabs-wrapper
+                    .nav
+                        .nav-item
+                            .nav-link
+                                font-size: 10px 
+                                padding: 0.75rem 0rem 0.75rem 0rem
+@media (max-width: 360px)
+    #company-profile
+        .company-work-details-wrapper
+            .content-wrapper
+                .tabs-wrapper
+                    .nav
+                        .nav-item
+                            .nav-link
+                                font-size: 8px 
+                                padding: 0.7rem 0rem 0.7rem 0rem

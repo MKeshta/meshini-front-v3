@@ -6,12 +6,38 @@ header
                 width: 80px
         .navbar-nav
             .nav-item
+                display: flex
+                align-items: center
+                margin-right: 1rem
                 .nav-link
                     color: $darkBlue
                     font-weight: 600
                     white-space: nowrap
                     &:hover
                         color: lighten($darkBlue,15%)
+                .dropdown
+                    .profile-pic-wrapper
+                        .profile-pic
+                            position: relative
+                            border-radius: 50%
+                            width: 60px
+                            height: 60px
+                            border: 2px solid $terqwaz
+                            overflow: hidden
+                            .profile-pic-img
+                                position: absolute
+                                width: 100%
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%,-50%)
+                    .dropdown-menu
+                        left: -7rem
+                        border-radius: 10px 0px 10px 10px
+                        border: 2px solid $terqwaz
+                        .dropdown-item
+                            font-size: 15px
+                            font-weight: bold
+                            color: $darkBlue
 @media (max-width: 885px)
     header
         .primary-nav

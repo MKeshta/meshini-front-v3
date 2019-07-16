@@ -1,5 +1,4 @@
 
-
 function sliderheight() {
   var divHeight = $('.signup-page').height();
   $('.signup-pages-wrapper').css({ 'height': divHeight });
@@ -14,7 +13,7 @@ var navFiller = document.getElementById("primary-nav-filler");
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 function stickNav() {
-  
+
   if (window.pageYOffset >= sticky) {
     $('#primary-nav-filler').height($('#primary-nav').height() + 30);
     navbar.classList.add("sticky");
@@ -31,19 +30,19 @@ function signupCardSwip() {
     $('.signup-page.active').children('input').each(function (i) {
       if ($(this).val() == '' || $(this).val() == ' ') {
         allowSwip = false
-        
+
       }
-      else{
-        if($(this).attr('type')=='email'){
-          if(!validateEmail($(this).val())){
-          allowSwip=validateEmail($(this).val())
-          $(this).css({'border-color':'red'})
-        }
+      else {
+        if ($(this).attr('type') == 'email') {
+          if (!validateEmail($(this).val())) {
+            allowSwip = validateEmail($(this).val())
+            $(this).css({ 'border-color': 'red' })
+          }
         }
       }
     });
 
-    allowSwip=true;
+    allowSwip = true;
 
     if (allowSwip) {
       $('.login-link').addClass('d-none');
@@ -108,7 +107,7 @@ function fileInputChange() {
     var id = $(this).attr('id');
     $(this).siblings('label').find('.filename').empty()
     $(this).siblings('label').find('.filename').append(document.getElementById(id).files[0].name)
-    $(this).siblings('label').find('.filename').css({'color':'white'});
+    $(this).siblings('label').find('.filename').css({ 'color': 'white' });
     $(this).siblings('label').find('.loading-percentage').removeClass('d-none')
     $(this).siblings('label').find('.loader').removeClass('d-none')
   })
@@ -162,3 +161,54 @@ function validateEmail(email) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
+function calender() {
+  var events = [
+    { "date": "2019-07-07", "badge": false, "title": "Example 1" },
+    { "date": "2019-07-06", "badge": false, "title": "Example 2" }
+  ]
+
+  var now = new Date();
+
+  var year = now.getFullYear();
+
+  var month = now.getMonth() + 1;
+
+  var settings = {
+
+    language: false,
+
+    year: year,
+
+    month: month,
+
+    show_previous: true,
+
+    show_next: true,
+
+    cell_border: false,
+
+    today: true,
+
+    show_days: true,
+
+    weekstartson: 1,
+
+    nav_icon: true, // object: prev: string, next: string
+
+    data: events,
+
+    ajax: false, // object: url: string, modal: boolean,
+
+    legend: false, // object array, [{type: string, label: string, classname: string}]
+
+    action: false, // function
+
+    action_nav: false // function
+
+  };
+  $("#calendar-container").zabuto_calendar(settings);
+}
+if ($('#calendar-container').length > 0) {
+  calender()
+}
+
