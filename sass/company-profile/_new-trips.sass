@@ -1,0 +1,90 @@
+#pills-New-trips
+    margin-top: -3rem
+    .nav
+        .nav-item
+            .nav-link
+                background-color: rgba(#e5e5e5,0.5) !important
+                cursor: pointer
+                 -webkit-user-select: none
+                -moz-user-select: none 
+                -ms-user-select: none
+                user-select: none
+
+                &.active
+                    background-color: white !important
+    #new-trip-form
+        .new-trip-pages-wrapper
+            position: relative
+            overflow: hidden
+            z-index: 1
+            transition: height 500ms
+            .new-trip-page
+                position: absolute
+                width: 100% 
+                transition: left 300ms
+                &.active
+                    left: 0%
+                &.prev
+                    left: -110%
+                &.next
+                    left: 110%
+                .trip-input-wrapper
+                    position: relative
+                    margin-bottom: 2rem
+                    .input-icon
+                        position: absolute
+                        top: 50%
+                        left: 20px
+                        transform: translate(0%,-50%)
+                        img
+                            width: 18px
+                    textarea
+                        &.new-trip-input
+                            padding-top: 2rem
+                            height: 10rem
+                            resize: none
+                            &~.input-icon
+                                top: 26%
+                    .new-trip-input
+                        display: block
+                        background-color: white
+                        width: 100%
+                        border: none
+                        padding-left: 3rem
+                        height: 45px
+                        border-radius: 40px
+                        margin: 0 auto
+                        .places-wrapper
+                            display: flex
+                            justify-content: flex-start
+                            flex-wrap: wrap
+                            .place
+                                border: 1px solid $lightGray
+                                border-radius: 30px
+                                padding-left: 15px
+                                padding-right: 15px
+                                color: $lightGray
+                                margin: 0.5rem 0.75rem 0.5rem 0.75rem
+                                .close
+                                    display: inline-block
+                                    margin-left: 10px
+                                    img
+                                        width: 10px
+                        
+                .add-country-btn-wrapper
+                    text-align: center
+                    margin-top: 1.5rem
+                    .add-country-btn
+                        background-color: transparent
+                        border: none
+                        outline: none
+                        color: $darkBlue
+                        font-weight: 600
+                        text-decoration: underline
+                        cursor: pointer
+                        &:hover
+                            color: darken($darkBlue,5%)
+    .step-tracker
+        text-align: center
+        font-weight: 600
+        color: white

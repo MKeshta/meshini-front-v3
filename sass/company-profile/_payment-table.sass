@@ -1,0 +1,68 @@
+.payment-table-wrapper
+    .table-wrapper
+        overflow-x: auto
+        .table
+            color: $darkBlue
+            width: 100%
+            tbody
+                tr
+                    .table-item
+                        vertical-align: middle
+                        &.payment-status-wrapper
+                            .payment-status
+                                display: inline-block
+                                width: 30px
+                                height: 30px
+                                background-size: 100% auto
+                                background-position: center center
+                                background-repeat: no-repeat
+                                &.success
+                                    background-image: url('../images/paymentStatus/checked.png')
+                                &.wait
+                                    background-image: url('../images/paymentStatus/sand-clock.png')
+                                &.bill
+                                    background-image: url('../images/paymentStatus/bill.png')
+@media (max-width: 1388px)
+    .payment-table-wrapper
+        .table
+            font-size: 14px
+            tbody
+                tr
+                    .table-item
+                        &.payment-status-wrapper
+                            .payment-status
+                                width: 25px
+                                height: 25px
+@media (max-width: 1255px)
+    .payment-table-wrapper
+        .table
+            font-size: 12px
+            tbody
+                tr
+                    .table-item
+                        &.payment-status-wrapper
+                            .payment-status
+                                width: 20px
+                                height: 20px
+@media (max-width: 991px)
+    .payment-table-wrapper
+        .table
+            font-size: 10px
+            tbody
+                tr
+                    .table-item
+                        &.payment-status-wrapper
+                            .payment-status
+                                width: 17px
+                                height: 17px
+@media (max-width: 720px)
+    .payment-table-wrapper
+        .table
+            font-size: 11px
+            tbody
+                tr
+                    .table-item
+                        &.payment-status-wrapper
+                            .payment-status
+                                width: 15px
+                                height: 15px

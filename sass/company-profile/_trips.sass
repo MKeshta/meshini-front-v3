@@ -1,0 +1,44 @@
+.trips-wrapper
+    .cards-wrapper
+        .white-card
+            padding: 1rem  !important
+            transition: all 200ms
+            &:hover
+                background-color: darken(white,5%) !important
+            .card-item
+                font-weight: 600
+                padding-top: 1rem
+            .trip-icons-wrapper
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                height: 100%
+                .trip-icon
+                    text-align: right
+                    img
+                        width: 24px
+                        padding-bottom: 0.5
+
+@media (max-width: 1300px)
+    .trips-wrapper
+        .cards-wrapper
+            .white-card
+                .card-item
+                    font-size: 14px
+@media (max-width: 1000px)
+    .trips-wrapper
+        .cards-wrapper
+            .white-card
+                .card-item
+                    font-size: 14px
+@media (max-width: 350px)
+    .trips-wrapper
+        .cards-wrapper
+            .white-card
+                .card-item
+                    font-size: 10px
+                    padding-top: 0.75rem
+                .trip-icons-wrapper
+                    .trip-icon
+                        img 
+                            width: 20px

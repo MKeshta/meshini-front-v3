@@ -9674,6 +9674,11 @@ body, html {
   text-decoration: none;
   transition: all 200ms;
   font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn-darkBlue:hover {
   background-color: #1d2c53;
@@ -9688,6 +9693,11 @@ body, html {
   text-decoration: none;
   transition: all 200ms;
   font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn-lightGray:hover {
   background-color: #636363;
@@ -9702,6 +9712,11 @@ body, html {
   text-decoration: none;
   transition: all 200ms;
   font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn-white:hover {
   background-color: #d9d9d9;
@@ -9716,6 +9731,11 @@ body, html {
   text-decoration: none;
   transition: all 200ms;
   font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn-darkBlue-outline:hover {
   background-color: #243666;
@@ -11714,11 +11734,6 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 }
 #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .submit-btn-wrapper .btn-white {
   font-size: 20px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .step-tracker {
   font-weight: bold;
@@ -12001,30 +12016,27 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
     padding-bottom: 0.25rem;
   }
 }
-.trips-wrapper .cards-wrapper .trip-link {
-  text-decoration: none;
-}
-.trips-wrapper .cards-wrapper .trip-link .white-card {
+.trips-wrapper .cards-wrapper .white-card {
   padding: 1rem !important;
   transition: all 200ms;
 }
-.trips-wrapper .cards-wrapper .trip-link .white-card:hover {
+.trips-wrapper .cards-wrapper .white-card:hover {
   background-color: #f2f2f2 !important;
 }
-.trips-wrapper .cards-wrapper .trip-link .white-card .card-item {
+.trips-wrapper .cards-wrapper .white-card .card-item {
   font-weight: 600;
   padding-top: 1rem;
 }
-.trips-wrapper .cards-wrapper .trip-link .white-card .trip-icons-wrapper {
+.trips-wrapper .cards-wrapper .white-card .trip-icons-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-.trips-wrapper .cards-wrapper .trip-link .white-card .trip-icons-wrapper .trip-icon {
+.trips-wrapper .cards-wrapper .white-card .trip-icons-wrapper .trip-icon {
   text-align: right;
 }
-.trips-wrapper .cards-wrapper .trip-link .white-card .trip-icons-wrapper .trip-icon img {
+.trips-wrapper .cards-wrapper .white-card .trip-icons-wrapper .trip-icon img {
   width: 24px;
   padding-bottom: 0.5;
 }
@@ -12047,6 +12059,176 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   .trips-wrapper .cards-wrapper .white-card .trip-icons-wrapper .trip-icon img {
     width: 20px;
   }
+}
+.payment-table-wrapper .table-wrapper {
+  overflow-x: auto;
+}
+.payment-table-wrapper .table-wrapper .table {
+  color: #243666;
+  width: 100%;
+}
+.payment-table-wrapper .table-wrapper .table tbody tr .table-item {
+  vertical-align: middle;
+}
+.payment-table-wrapper .table-wrapper .table tbody tr .table-item.payment-status-wrapper .payment-status {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.payment-table-wrapper .table-wrapper .table tbody tr .table-item.payment-status-wrapper .payment-status.success {
+  background-image: url("../images/paymentStatus/checked.png");
+}
+.payment-table-wrapper .table-wrapper .table tbody tr .table-item.payment-status-wrapper .payment-status.wait {
+  background-image: url("../images/paymentStatus/sand-clock.png");
+}
+.payment-table-wrapper .table-wrapper .table tbody tr .table-item.payment-status-wrapper .payment-status.bill {
+  background-image: url("../images/paymentStatus/bill.png");
+}
+
+@media (max-width: 1388px) {
+  .payment-table-wrapper .table {
+    font-size: 14px;
+  }
+  .payment-table-wrapper .table tbody tr .table-item.payment-status-wrapper .payment-status {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 1255px) {
+  .payment-table-wrapper .table {
+    font-size: 12px;
+  }
+  .payment-table-wrapper .table tbody tr .table-item.payment-status-wrapper .payment-status {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .payment-table-wrapper .table {
+    font-size: 10px;
+  }
+  .payment-table-wrapper .table tbody tr .table-item.payment-status-wrapper .payment-status {
+    width: 17px;
+    height: 17px;
+  }
+}
+@media (max-width: 720px) {
+  .payment-table-wrapper .table {
+    font-size: 11px;
+  }
+  .payment-table-wrapper .table tbody tr .table-item.payment-status-wrapper .payment-status {
+    width: 15px;
+    height: 15px;
+  }
+}
+#pills-New-trips {
+  margin-top: -3rem;
+}
+#pills-New-trips .nav .nav-item .nav-link {
+  background-color: rgba(229, 229, 229, 0.5) !important;
+  cursor: pointer;
+  cursor--webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#pills-New-trips .nav .nav-item .nav-link.active {
+  background-color: white !important;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: height 500ms;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page {
+  position: absolute;
+  width: 100%;
+  transition: left 300ms;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.active {
+  left: 0%;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.prev {
+  left: -110%;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.next {
+  left: 110%;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0%, -50%);
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .input-icon img {
+  width: 18px;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper textarea.new-trip-input {
+  padding-top: 2rem;
+  height: 10rem;
+  resize: none;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper textarea.new-trip-input ~ .input-icon {
+  top: 26%;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input {
+  display: block;
+  background-color: white;
+  width: 100%;
+  border: none;
+  padding-left: 3rem;
+  height: 45px;
+  border-radius: 40px;
+  margin: 0 auto;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input .places-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input .places-wrapper .place {
+  border: 1px solid #707070;
+  border-radius: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #707070;
+  margin: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input .places-wrapper .place .close {
+  display: inline-block;
+  margin-left: 10px;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input .places-wrapper .place .close img {
+  width: 10px;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .add-country-btn-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .add-country-btn-wrapper .add-country-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #243666;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .add-country-btn-wrapper .add-country-btn:hover {
+  color: #1d2c53;
+}
+#pills-New-trips .step-tracker {
+  text-align: center;
+  font-weight: 600;
+  color: white;
 }
 
 /*# sourceMappingURL=app.css.map */
