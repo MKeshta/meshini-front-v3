@@ -86,3 +86,41 @@ body,html
     text-align: center
 .lcl_icon
     display: none !important
+
+.date-input-wrapper
+    position: relative
+    input[type='date']
+        color: transparent !important
+        &+label
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            display: block
+            pointer-events: none
+            &::before
+                position: absolute
+                top: 50%
+                left: 40px
+                transform: translateY(-50%)
+                color: #a0a0a0
+                margin-right: 0.5em
+        &[placeholder='Date']
+            &+label
+                &::before
+                    content: 'Date' !important
+        &[placeholder='From']
+            &+label
+                &::before
+                    content: 'From' !important
+        &[placeholder='To']
+            &+label
+                &::before
+                    content: 'To' !important
+        
+    input[type="date"]:focus,input[type="date"]:valid
+        color: #a0a0a0 !important
+        &+label
+            &::before
+                content: "" !important

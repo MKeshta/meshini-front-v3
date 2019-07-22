@@ -9764,6 +9764,45 @@ body, html {
   display: none !important;
 }
 
+.date-input-wrapper {
+  position: relative;
+}
+.date-input-wrapper input[type=date] {
+  color: transparent !important;
+}
+.date-input-wrapper input[type=date] + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+.date-input-wrapper input[type=date] + label::before {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  color: #a0a0a0;
+  margin-right: 0.5em;
+}
+.date-input-wrapper input[type=date][placeholder=Date] + label::before {
+  content: "Date" !important;
+}
+.date-input-wrapper input[type=date][placeholder=From] + label::before {
+  content: "From" !important;
+}
+.date-input-wrapper input[type=date][placeholder=To] + label::before {
+  content: "To" !important;
+}
+.date-input-wrapper input[type=date]:focus, .date-input-wrapper input[type=date]:valid {
+  color: #a0a0a0 !important;
+}
+.date-input-wrapper input[type=date]:focus + label::before, .date-input-wrapper input[type=date]:valid + label::before {
+  content: "" !important;
+}
+
 header .primary-nav {
   background-color: white;
 }
@@ -10581,6 +10620,96 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
     padding-right: 0.1px;
   }
 }
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  padding: 0;
+  height: auto;
+  width: 95%;
+  background-color: transparent;
+  border: none;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  color: #a0a0a0 !important;
+  background-color: #ffffff;
+}
+
+.select-selected.select-arrow-active {
+  border-radius: 25px 25px 0px 0px;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 10px;
+  transform: translate(0%, -50%);
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #a0a0a0 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #a0a0a0 transparent;
+  top: 42%;
+  right: 10px;
+  transform: translate(0%, -50%);
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #a0a0a0;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 0px 0px 25px 25px;
+  overflow: hidden;
+}
+.select-items div {
+  border-color: transparent transparent rgba(36, 54, 102, 0.1) transparent;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 #search .search-wrapper .bg-container {
   background-size: cover;
   background-position: center center;
@@ -10703,7 +10832,7 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-  #search .search-wrapper .search-card-wrapper .search-card .search-form-wrapper .search-form .search-input {
+  #search .search-wrapper .search-card-wrapper .search-card .search-form-wrapper .search-form .select-selected {
     font-size: 14px;
     height: 35px;
   }
@@ -12226,6 +12355,7 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   top: 50%;
   left: 20px;
   transform: translate(0%, -50%);
+  z-index: 3;
 }
 #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .input-icon img {
   width: 18px;
