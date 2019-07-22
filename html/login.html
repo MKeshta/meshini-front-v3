@@ -12,159 +12,163 @@
 </head>
 
 <body>
-    <header>
-        <nav class="blue-nav py-sm-2 py-1  ">
-            <div class="row mx-0">
-                <div class="col-11 px-0 mx-0">
-                    <ul class="nav d-flex flex-row  justify-content-start">
-                        <li class="nav-item">
-                            <img class="icon" src='../images/icons/world.png' />
-                            <span class="icon-label d-md-inline-block d-none  pl-1">Languages</span>
-                            <a href='' class="d-inline-block link px-2">ع</a>
-                            <a href='' class="d-inline-block link px-2">Fr</a>
+    <div style='display: flex;flex-flow: column; height: 100%;'>
+        <header  style="flex: 0 1 auto;">
+            <nav class="blue-nav py-sm-2 py-1  ">
+                <div class="row mx-0">
+                    <div class="col-11 px-0 mx-0">
+                        <ul class="nav d-flex flex-row  justify-content-start">
+                            <li class="nav-item">
+                                <img class="icon" src='../images/icons/world.png' />
+                                <span class="icon-label d-md-inline-block d-none  pl-1">Languages</span>
+                                <a href='' class="d-inline-block link px-2">ع</a>
+                                <a href='' class="d-inline-block link px-2">Fr</a>
+                            </li>
+                            <li class="nav-item contact">
+                                <img class="icon d-md-inline-block d-none" src='../images/icons/placeholder.png' />
+                                <span class="icon-label pl-1"><a class="link" href=''>Contact us</a></span>
+                            </li>
+                            <li class="nav-item">
+                                <img class="icon d-md-inline-block d-none" src='../images/icons/share.png' />
+                                <span class="icon-label d-md-inline-block d-none pl-1">Our social media</span>
+                                <span class="social-media-icon-wrapper">
+                                    <a href="">
+                                        <img class="icon ml-sm-2 ml-1" src='../images/icons/facebook-logo-button.png' />
+                                    </a>
+                                    <a href="">
+                                        <img class="icon ml-sm-2 ml-1" src='../images/icons/instagram-logo.png' />
+                                    </a>
+                                    <a href="">
+                                        <img class="icon ml-sm-2 ml-1" src='../images/icons/twitter.png' />
+                                    </a>
+                                    <a href="">
+                                        <img class="icon ml-sm-2 ml-1" src='../images/icons/youtube-logotype.png' />
+                                    </a>
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-1 px-0 mx-0">
+                        <div class="d-flex flex-sm-row flex-column  justify-content-around align-items-center"
+                            style="height: 100%">
+                            <a class="d-block mx-sm-2 link" href="">Login</a>
+                            <a class="d-block mx-sm-2 link" style="white-space:nowrap" href="">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav id='primary-nav'
+                class="navbar primary-nav sticky-top navbar-expand-lg navbar-light px-sm-5 px-1 py-sm-3 py-1">
+
+                <a class="navbar-brand" href="#">
+                    <img class="nav-logo ml-5 " src="../images/logo/logo.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse mr-sm-4 ml-2 ml-sm-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home </a>
                         </li>
-                        <li class="nav-item contact">
-                            <img class="icon d-md-inline-block d-none" src='../images/icons/placeholder.png' />
-                            <span class="icon-label pl-1"><a class="link" href=''>Contact us</a></span>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Destinations</a>
                         </li>
                         <li class="nav-item">
-                            <img class="icon d-md-inline-block d-none" src='../images/icons/share.png' />
-                            <span class="icon-label d-md-inline-block d-none pl-1">Our social media</span>
-                            <span class="social-media-icon-wrapper">
-                                <a href="">
-                                    <img class="icon ml-sm-2 ml-1" src='../images/icons/facebook-logo-button.png' />
-                                </a>
-                                <a href="">
-                                    <img class="icon ml-sm-2 ml-1" src='../images/icons/instagram-logo.png' />
-                                </a>
-                                <a href="">
-                                    <img class="icon ml-sm-2 ml-1" src='../images/icons/twitter.png' />
-                                </a>
-                                <a href="">
-                                    <img class="icon ml-sm-2 ml-1" src='../images/icons/youtube-logotype.png' />
-                                </a>
-                            </span>
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Local experts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="btn-darkBlue py-2 px-4">Register</span> </a>
                         </li>
 
                     </ul>
+
                 </div>
-                <div class="col-1 px-0 mx-0">
-                    <div class="d-flex flex-sm-row flex-column  justify-content-around align-items-center"
-                        style="height: 100%">
-                        <a class="d-block mx-sm-2 link" href="">Login</a>
-                        <a class="d-block mx-sm-2 link" style="white-space:nowrap" href="">Sign up</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <nav id='primary-nav'
-            class="navbar primary-nav sticky-top navbar-expand-lg navbar-light px-sm-5 px-1 py-sm-3 py-1">
+            </nav>
+            <div id="primary-nav-filler"></div>
 
-            <a class="navbar-brand" href="#">
-                <img class="nav-logo ml-5 " src="../images/logo/logo.png">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        </header>
 
-            <div class="collapse navbar-collapse mr-sm-4 ml-2 ml-sm-0" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Destinations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Local experts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="btn-darkBlue py-2 px-4">Register</span> </a>
-                    </li>
-
-                </ul>
-
-            </div>
-        </nav>
-        <div id="primary-nav-filler"></div>
-
-    </header>
-
-    <main>
-        <div id=login>
-            <div class="bg-beach p-md-5 pt-4">
-                <div class="content-wrapper py-md-5 py-2">
-                    <div class="row mx-0">
-                        <div class="col-lg-6 d-lg-block d-none">
-                            <div class="circle-wrapper">
-                                <div class="circle d-flex justify-content-center align-items-center">
-                                    <div
-                                        class="circle-list d-flex flex-column justify-content-around align-items-center">
-                                        <div class="circle-list-item">
-                                            <img src='../images/icons/zigzag-moustache.png'>
-                                        </div>
-                                        <div class="circle-list-item">
-                                            The whole
-                                        </div>
-                                        <div class="circle-list-item">
-                                            World between
-                                        </div>
-                                        <div class="circle-list-item">
-                                            your hands
-                                        </div>
-                                        <div class="circle-list-item">
-                                            <a class="btn-white-outline" href=''>Explore Now!</a>
+        <main  style="flex: 1 1 auto;">
+            <div id=login>
+                <div class="bg-beach p-md-5 pt-4">
+                    <div class="content-wrapper py-md-5 py-2">
+                        <div class="row mx-0">
+                            <div class="col-lg-6 d-lg-block d-none">
+                                <div class="circle-wrapper">
+                                    <div class="circle d-flex justify-content-center align-items-center">
+                                        <div
+                                            class="circle-list d-flex flex-column justify-content-around align-items-center">
+                                            <div class="circle-list-item">
+                                                <img src='../images/icons/zigzag-moustache.png'>
+                                            </div>
+                                            <div class="circle-list-item">
+                                                The whole
+                                            </div>
+                                            <div class="circle-list-item">
+                                                World between
+                                            </div>
+                                            <div class="circle-list-item">
+                                                your hands
+                                            </div>
+                                            <div class="circle-list-item">
+                                                <a class="btn-white-outline" href=''>Explore Now!</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6  col-12">
-                            <div id='form-container'>
-                                <div id=login-form-wrapper>
-                                    <div class="bluered-card form-card px-3 py-4">
-                                        <h3 class='header'>login</h3>
-                                        <form class="form" action="" method="POST">
-                                            <input type="email" required class="form-control form-input" name="email"
-                                                placeholder="Email">
-                                            <input type="password" required class="form-control form-input"
-                                                name="password" placeholder="Password">
-                                            <a href='' class="forget-password">Forget password!</a>
-                                            <div class="form-btn-wrapper">
-                                                <button class="btn-white">Login</button>
-                                            </div>
-                                        </form>
-                                        <div class="connect-with mt-5">
-                                            <span class="bordered-label">Or connect with social media</span>
-                                            <div class="row mx-0 mt-3">
-                                                <div class="col-6">
-                                                    <a href=''>
-                                                        <div class="social-media-btn text-right"><img
-                                                                src="../images/icons/facebook-white-button.png"
-                                                                alt="Twitter"></div>
-                                                    </a>
+                            <div class="col-lg-6  col-12">
+                                <div id='form-container'>
+                                    <div id=login-form-wrapper>
+                                        <div class="bluered-card form-card px-3 py-4">
+                                            <h3 class='header'>login</h3>
+                                            <form class="form" action="" method="POST">
+                                                <input type="email" required class="form-control form-input"
+                                                    name="email" placeholder="Email">
+                                                <input type="password" required class="form-control form-input"
+                                                    name="password" placeholder="Password">
+                                                <a href='' class="forget-password">Forget password!</a>
+                                                <div class="form-btn-wrapper">
+                                                    <button class="btn-white">Login</button>
                                                 </div>
-                                                <div class="col-6">
-                                                    <a href=''>
-                                                        <div class="social-media-btn text-left"><img
-                                                                src="../images/icons/twitter-white-button.png"
-                                                                alt="Twitter"></div>
-                                                    </a>
+                                            </form>
+                                            <div class="connect-with mt-5">
+                                                <span class="bordered-label">Or connect with social media</span>
+                                                <div class="row mx-0 mt-3">
+                                                    <div class="col-6">
+                                                        <a href=''>
+                                                            <div class="social-media-btn text-right"><img
+                                                                    src="../images/icons/facebook-white-button.png"
+                                                                    alt="Twitter"></div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <a href=''>
+                                                            <div class="social-media-btn text-left"><img
+                                                                    src="../images/icons/twitter-white-button.png"
+                                                                    alt="Twitter"></div>
+                                                        </a>
+                                                    </div>
+
                                                 </div>
-
                                             </div>
-                                        </div>
-                                        <div class="mt-4">
-                                            <span class="have-no-acc">Have no account? <a href=''>signup Now!</a></span>
-                                        </div>
+                                            <div class="mt-4">
+                                                <span class="have-no-acc">Have no account? <a href=''>signup
+                                                        Now!</a></span>
+                                            </div>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -172,118 +176,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer>
-        <div id="footer">
-            <div class="footer-bg-img">
-                <div class="footer-bg-filter">
-                    <div class="footer-wrapper">
-                        <div class="footer-card-holder">
-                            <div class="footer-card">
-                                <div class="footer-card-body">
-                                    <div class="row mx-0">
-                                        <div class="col-lg-4 col-6 mt-4">
-                                            <div class="footer-section">
-                                                <h4 class="footer-main-header">Need help?</h4>
-                                                <div class="footer-cell bordered-cell">
-                                                    <div class="cell-header">
-                                                        Call us
-                                                    </div>
-                                                    <div class="cell-body">
-                                                        <a class="phone" href="tel:00201033007841">002 0103 300 7841</a>
-                                                    </div>
-                                                </div>
-                                                <div class="footer-cell bordered-cell">
-                                                    <div class="cell-header">
-                                                        Email us
-                                                    </div>
-                                                    <div class="cell-body">
-                                                        <a class="email"
-                                                            href="mailto:Info@meshini.com">Info@meshini.com</a>
-                                                    </div>
-                                                </div>
-                                                <div class="footer-cell bordered-cell">
-                                                    <div class="cell-header">
-                                                        Follow us
-                                                    </div>
-                                                    <div class="cell-body">
-                                                        <a target="_blank" class="footer-social facebook" href=""><img
-                                                                src="../images/icons/facebook-colored.png"></a>
-                                                        <a target="_blank" class="footer-social twitter" href=""><img
-                                                                src="../images/icons/twitter-colored.png"></a>
-                                                        <a target="_blank" class="footer-social instagram" href=""><img
-                                                                src="../images/icons/instagram-colored.png"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-6 mt-4">
-                                            <div class="footer-section">
-                                                <h4 class="footer-main-header">Company</h4>
-                                                <div class="footer-cell">
-                                                    <div class="cell-body">
-                                                        <div>
-                                                            <a href="">About us</a>
-                                                        </div>
-                                                        <div>
-                                                            <a href="">Privacy and policy</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="footer-section mt-4">
-                                                <h4 class="footer-main-header">Download App</h4>
-                                                <div class="footer-cell">
-                                                    <div class="cell-body">
-                                                        <a target="_blank" class="footer-appStore ios" href=""><img
-                                                                src="../images/app stores/ios.png"></a>
-                                                        <a target="_blank" class="footer-appStore android ml-2"
-                                                            href=""><img src='../images/app stores/android.png'> </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-12 mt-4 last-col">
-                                            <div class="footer-section text-lg-right text-left">
-                                                <h4 class="footer-main-header">Settings</h4>
-                                                <div class="footer-cell">
-                                                    <div class="cell-header">
-                                                        Language
-                                                    </div>
-                                                    <div class="cell-body">
-                                                        <div class="dropdown">
-                                                            <button type="button"
-                                                                class="btn lang-btn dropdown-toggle px-4 mt-2"
-                                                                data-toggle="dropdown">
-                                                                English
-                                                            </button>
-                                                            <div class="dropdown-menu">
-
-                                                                <a class="dropdown-item lang-option"
-                                                                    href="">Français</a>
-                                                                <a class="dropdown-item lang-option" href="">العربية</a>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </footer>
+        </main>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

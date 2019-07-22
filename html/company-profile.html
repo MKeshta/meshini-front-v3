@@ -589,7 +589,7 @@
                                                         <td class="table-item mobile">Otto</td>
                                                         <td class="table-item seats">@mdo</td>
                                                         <td class="table-item payment-status-wrapper"><i
-                                                                class="payment-status wait"></i></td>
+                                                                class="payment-status success"></i></td>
 
                                                     </tr>
                                                     <tr>
@@ -601,7 +601,7 @@
                                                         <td class="table-item mobile">Otto</td>
                                                         <td class="table-item seats">@mdo</td>
                                                         <td class="table-item payment-status-wrapper"><i
-                                                                class="payment-status bill"></i></td>
+                                                                class="payment-status success"></i></td>
 
                                                     </tr>
                                                 </tbody>
@@ -985,7 +985,7 @@
                                                                 class="payment-status wait"></i></td>
 
                                                     </tr>
-                                                    <tr>
+                                                    <tr data-toggle="modal" data-target="#receipt-modal">
                                                         <th scope="row">3</th>
                                                         <td class="table-item clint-name">Mark</td>
                                                         <td class="table-item gender">Otto</td>
@@ -994,12 +994,43 @@
                                                         <td class="table-item mobile">Otto</td>
                                                         <td class="table-item seats">@mdo</td>
                                                         <td class="table-item payment-status-wrapper"><i
-                                                                class="payment-status bill"></i></td>
+                                                                class="payment-status bill notification"></i></td>
 
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
+
+
+                                        <div class="modal fade" id="receipt-modal" tabindex="-1" role="dialog"
+                                            aria-labelledby="receipt-modalTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+
+                                                    <div class="modal-body">
+                                                        <img class="receipt-img"
+                                                            src='../images/receipt/12BR_recurring_receipt_transaction.png'
+                                                            width="100%">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn" data-dismiss="modal">
+                                                            <div class="footer-btn-wrapper">
+                                                                <img src='../images/paymentStatus/x-button.png'>
+                                                                <label class="btn-label">Cancel</label>
+                                                            </div>
+                                                        </button>
+                                                        <button type="button" class="btn" data-dismiss="modal">
+                                                            <div class="footer-btn-wrapper">
+                                                                <img src='../images/paymentStatus//checked.png'>
+                                                                <label class="btn-label">Accept</label>
+                                                            </div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                                     </div>
                                 </div>
 
@@ -1167,7 +1198,8 @@
                                                             </div>
 
                                                         </div>
-                                                        <span class="text-white">Places you enter first appears first in
+                                                        <span class="places-citation">Places you enter first
+                                                            appears first in
                                                             the program digram</span>
                                                     </div>
                                                 </div>
@@ -1190,8 +1222,90 @@
                                             </div>
                                         </div>
                                         <div class="new-trip-page next" id='page-4' step=4>
-                                            <div>
+                                            <div class="px-lg-5 px-3">
+                                                <div id="new-trip-photo-section">
+                                                    <div class="upload-input-wrapper text-center">
+                                                        <label for='trip-input-photos'
+                                                            class="btn-white px-lg-5 py-lg-3 px-md-4 px-3 py-2">Upload
+                                                            Photos</label>
+                                                        <input type='file' id='trip-input-photos' class="d-none">
+                                                    </div>
+                                                    <div class="px-lg-5 px-md-3 px-sm-2 mt-2">
+                                                        <div class="new-trip-photos-wrapper">
+                                                            <div class="trip-photo-item">
+                                                                <div class="img-holder">
+                                                                    <img class="new-trip-photo"
+                                                                        src='../images/new-trip-photos/1.png'>
+                                                                </div>
+                                                                <button type='button' class="delete-btn">
+                                                                    <img src='../images/icons/x-button.png'>
+                                                                </button>
+                                                            </div>
+                                                            <div class="trip-photo-item">
+                                                                <div class="img-holder">
+                                                                    <img class="new-trip-photo"
+                                                                        src='../images/new-trip-photos/7.png'>
+                                                                </div>
+                                                                <button type='button' class="delete-btn">
+                                                                    <img src='../images/icons/x-button.png'>
+                                                                </button>
+                                                            </div>
+                                                            <div class="trip-photo-item">
+                                                                <div class="img-holder">
+                                                                    <img class="new-trip-photo"
+                                                                        src='../images/new-trip-photos/2.png'>
+                                                                </div>
+                                                                <button type='button' class="delete-btn">
+                                                                    <img src='../images/icons/x-button.png'>
+                                                                </button>
+                                                            </div>
+                                                            <div class="trip-photo-item">
+                                                                <div class="img-holder">
+                                                                    <img class="new-trip-photo"
+                                                                        src='../images/new-trip-photos/3.png'>
+                                                                </div>
+                                                                <button type='button' class="delete-btn">
+                                                                    <img src='../images/icons/x-button.png'>
+                                                                </button>
+                                                            </div>
+                                                            <div class="trip-photo-item">
+                                                                <div class="img-holder">
+                                                                    <img class="new-trip-photo"
+                                                                        src='../images/new-trip-photos/4.png'>
+                                                                </div>
+                                                                <button type='button' class="delete-btn">
+                                                                    <img src='../images/icons/x-button.png'>
+                                                                </button>
+                                                            </div>
+                                                            <div class="trip-photo-item">
+                                                                <div class="img-holder">
+                                                                    <img class="new-trip-photo"
+                                                                        src='../images/new-trip-photos/5.png'>
+                                                                </div>
+                                                                <button type='button' class="delete-btn">
+                                                                    <img src='../images/icons/x-button.png'>
+                                                                </button>
+                                                            </div>
+                                                            <div class="trip-photo-item">
+                                                                <div class="img-holder">
+                                                                    <img class="new-trip-photo"
+                                                                        src='../images/new-trip-photos/6.png'>
+                                                                </div>
+                                                                <button type='button' class="delete-btn">
+                                                                    <img src='../images/icons/x-button.png'>
+                                                                </button>
+                                                            </div>
 
+
+
+
+
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

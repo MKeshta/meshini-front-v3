@@ -22,6 +22,17 @@
                                     background-image: url('../images/paymentStatus/sand-clock.png')
                                 &.bill
                                     background-image: url('../images/paymentStatus/bill.png')
+                                &.notification
+                                    position: relative
+                                    &::after
+                                        content: ''
+                                        position: absolute
+                                        width: 10px
+                                        height: 10px
+                                        background-color: #ff0000
+                                        top: -6px
+                                        right: 2px
+                                        border-radius: 50%
 @media (max-width: 1388px)
     .payment-table-wrapper
         .table

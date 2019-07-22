@@ -28,6 +28,9 @@
                     left: -110%
                 &.next
                     left: 110%
+                .places-citation
+                    color: $darkBlue
+                    font-weight: 600
                 .trip-input-wrapper
                     position: relative
                     margin-bottom: 2rem
@@ -68,9 +71,10 @@
                                 .close
                                     display: inline-block
                                     margin-left: 10px
+                                    cursor: pointer
                                     img
                                         width: 10px
-                        
+
                 .add-country-btn-wrapper
                     text-align: center
                     margin-top: 1.5rem
@@ -84,7 +88,95 @@
                         cursor: pointer
                         &:hover
                             color: darken($darkBlue,5%)
+                #new-trip-photo-section
+                    .new-trip-photos-wrapper
+                        display: flex  
+                        flex-wrap: wrap
+                        justify-content: center
+                        background-color: rgba(gray,0.16)
+                        border-radius: 44px
+                        .trip-photo-item
+                            position: relative
+                            margin: 0.5rem
+                            .delete-btn
+                                position: absolute
+                                top: 5px
+                                right: 5px
+                                background: transparent
+                                border: none
+                                outline: none !important
+                                padding: 0
+                                width: 25px
+                                &:active
+                                    right: 4px
+                                img
+                                    width: 100%     
+                            .img-holder
+                                width: 150px
+                                height: 150px
+                                margin: 0.5rem
+                                border-radius: 44px
+                                overflow: hidden
+                                .new-trip-photo
+                                    width: 100%
+                                    height: 100%
+                                     
+                
     .step-tracker
         text-align: center
         font-weight: 600
         color: white
+
+@media (max-width: 1300px)
+    #pills-New-trips
+        #new-trip-form
+            .new-trip-pages-wrapper
+                .new-trip-page
+                    #new-trip-photo-section
+                        .new-trip-photos-wrapper
+                            .trip-photo-item
+                                .delete-btn
+                                    width: 20px
+                                .img-holder
+                                    width: 130px
+                                    height: 130px
+@media (max-width: 768px)
+    #pills-New-trips
+        #new-trip-form
+            .new-trip-pages-wrapper
+                .new-trip-page
+                    .places-citation
+                        font-size: 13px
+                    .trip-input-wrapper
+                        margin-bottom: 1rem
+                        .input-icon
+                            img
+                               width: 15px
+                        .new-trip-input
+                            height: 35px
+                            font-size: 14px
+                    .add-country-btn-wrapper
+                        font-size: 14px
+                            
+                    #new-trip-photo-section
+                        .new-trip-photos-wrapper
+                            .trip-photo-item
+                                .delete-btn
+                                    width: 20px
+                                .img-holder
+                                    width: 100px
+                                    height: 100px
+@media (max-width: 415px)
+    #pills-New-trips
+        #new-trip-form
+            .new-trip-pages-wrapper
+                .new-trip-page
+                    #new-trip-photo-section
+                        .new-trip-photos-wrapper
+                            .trip-photo-item
+                                .delete-btn
+                                    width: 20px
+                                .img-holder
+                                    width: 90px
+                                    height: 90px
+
