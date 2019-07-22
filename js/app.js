@@ -63,7 +63,7 @@ function signupCardSwip() {
       }
     });
 
-    allowSwip = true;
+    // allowSwip = true;
 
     if (allowSwip) {
       $('.login-link').addClass('d-none');
