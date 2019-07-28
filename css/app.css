@@ -9680,7 +9680,7 @@ body, html {
   -ms-user-select: none;
   user-select: none;
 }
-.btn-darkBlue:hover {
+.btn-darkBlue:hover, .btn-darkBlue:focus {
   background-color: #1d2c53;
   text-decoration: none;
 }
@@ -9699,7 +9699,7 @@ body, html {
   -ms-user-select: none;
   user-select: none;
 }
-.btn-lightGray:hover {
+.btn-lightGray:hover, .btn-lightGray:focus {
   background-color: #636363;
   text-decoration: none;
 }
@@ -9718,7 +9718,7 @@ body, html {
   -ms-user-select: none;
   user-select: none;
 }
-.btn-white:hover {
+.btn-white:hover, .btn-white:focus {
   background-color: #d9d9d9;
   text-decoration: none;
 }
@@ -9737,13 +9737,13 @@ body, html {
   -ms-user-select: none;
   user-select: none;
 }
-.btn-darkBlue-outline:hover {
+.btn-darkBlue-outline:hover, .btn-darkBlue-outline:focus {
   background-color: #243666;
   color: white;
   text-decoration: none;
 }
 
-.link:hover {
+.link:hover, .link:focus {
   color: black !important;
 }
 
@@ -11819,11 +11819,20 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.active {
   left: 0%;
 }
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.active * {
+  display: auto;
+}
 #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.prev {
   left: -110%;
 }
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.prev * {
+  display: none;
+}
 #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.next {
   left: 110%;
+}
+#signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page.next * {
+  display: none;
 }
 #signup .bg-beach .content-wrapper #form-container #signup-form-wrapper .form-card .signup-pages-wrapper .signup-page .signup-page-header {
   font-size: 26px;
@@ -12231,6 +12240,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
     width: 20px;
   }
 }
+.payment-table-wrapper .table-back-btn {
+  cursor: pointer;
+}
 .payment-table-wrapper .table-wrapper {
   overflow-x: auto;
 }
@@ -12336,11 +12348,20 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.active {
   left: 0%;
 }
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.active * {
+  display: auto;
+}
 #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.prev {
   left: -110%;
 }
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.prev * {
+  display: none;
+}
 #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.next {
   left: 110%;
+}
+#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.next * {
+  display: none;
 }
 #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .places-citation {
   color: #243666;

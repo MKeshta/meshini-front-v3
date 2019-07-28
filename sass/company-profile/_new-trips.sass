@@ -24,10 +24,19 @@
                 transition: left 300ms
                 &.active
                     left: 0%
+                    *
+                        display: auto
+
+                    
                 &.prev
                     left: -110%
+                    *
+                        display: none
+                    
                 &.next
                     left: 110%
+                    *
+                        display: none                    
                 .places-citation
                     color: $darkBlue
                     font-weight: 600

@@ -41,60 +41,70 @@ window.onscroll = function () { stickNav() };
 
 function signupCardSwip() {
   $('.next-btn').click(function () {
-    var allowSwip = true;
-    $('.signup-page.active').children('input').each(function (i) {
-      if ($(this).val() == '' || $(this).val() == ' ') {
-        allowSwip = false
+    if ($(this).parents('#signup-form-wrapper').length > 0) {
+      var allowSwip = true;
+      $('.signup-page.active').children('input').filter('[required]:visible').each(function (i) {
+        if ($(this).val() == '' || $(this).val() == ' ') {
+          allowSwip = false
 
-      }
-      else {
-        if ($(this).attr('type') == 'email') {
-          if (!validateEmail($(this).val())) {
-            allowSwip = validateEmail($(this).val())
-            $(this).css({ 'border-color': 'red' })
+        }
+        else {
+          if ($(this).attr('type') == 'email') {
+            if (!validateEmail($(this).val())) {
+              allowSwip = validateEmail($(this).val())
+
+            }
+          }
+          if ($(this).attr('name') == 'phone') {
+            if (!isNumber($(this).val())) {
+              allowSwip = isNumber($(this).val())
+
+            }
           }
         }
-        if ($(this).attr('name') == 'phone') {
-          if (!isNumber($(this).val())) {
-            allowSwip = isNumber($(this).val())
-            $(this).css({ 'border-color': 'red' })
-          }
+
+
+        if (!allowSwip) {
+          $(this).css({ 'border': '1px solid', 'border-color': 'red' })
+          return false
+        } else {
+          $(this).css({ 'border': '0px solid' })
         }
+      });
+
+      // allowSwip = true;
+
+      if (allowSwip) {
+        $('.login-link').addClass('d-none');
+        $('.prev-btn').removeClass('d-none');
+
+        const activeCard = $(".signup-page.active");
+        const currentCardNum = activeCard.index();
+        if (currentCardNum + 1 == 2) {
+          $('#next-btn').addClass('d-none');
+          $('#next-btn').removeClass('d-inline-block');
+          $('#submit-btn').removeClass('d-none');
+          $('#submit-btn').addClass('d-inline-block');
+        }
+        $('.current-step').empty()
+        $('.current-step').append(currentCardNum + 2)
+
+        $('.prev-step').empty()
+        $('.prev-step').append(currentCardNum + 1)
+
+
+        activeCard.removeClass('active')
+        activeCard.addClass('prev')
+
+        $('.signup-page').eq(currentCardNum + 1).removeClass('next')
+        $('.signup-page').eq(currentCardNum + 1).addClass('active')
+
+
+
       }
-    });
 
-    // allowSwip = true;
-
-    if (allowSwip) {
-      $('.login-link').addClass('d-none');
-      $('.prev-btn').removeClass('d-none');
-
-      const activeCard = $(".signup-page.active");
-      const currentCardNum = activeCard.index();
-      if (currentCardNum + 1 == 2) {
-        $('#next-btn').addClass('d-none');
-        $('#next-btn').removeClass('d-inline-block');
-        $('#submit-btn').removeClass('d-none');
-        $('#submit-btn').addClass('d-inline-block');
-      }
-      $('.current-step').empty()
-      $('.current-step').append(currentCardNum + 2)
-
-      $('.prev-step').empty()
-      $('.prev-step').append(currentCardNum + 1)
-
-
-      activeCard.removeClass('active')
-      activeCard.addClass('prev')
-
-      $('.signup-page').eq(currentCardNum + 1).removeClass('next')
-      $('.signup-page').eq(currentCardNum + 1).addClass('active')
-
-
-
+      sliderheight();
     }
-
-    sliderheight();
 
   });
   $('.prev-btn').click(function () {
@@ -120,75 +130,238 @@ function signupCardSwip() {
     $('.signup-page').eq(activeCardNum - 1).addClass('active')
     sliderheight();
   });
+  $('#submit-btn').click(function (e) {
+    if ($(this).parents('#signup-form-wrapper').length > 0) {
+      var allowSwip = true;
+      $('.signup-page.active').children('input').filter('[required]:visible').each(function (i) {
+        if ($(this).val() == '' || $(this).val() == ' ') {
+          allowSwip = false
+
+        }
+        else {
+          if ($(this).attr('type') == 'email') {
+            if (!validateEmail($(this).val())) {
+              allowSwip = validateEmail($(this).val())
+
+            }
+          }
+          if ($(this).attr('name') == 'phone') {
+            if (!isNumber($(this).val())) {
+              allowSwip = isNumber($(this).val())
+
+            }
+          }
+        }
+
+
+        if (!allowSwip) {
+          $(this).css({ 'border': '1px solid', 'border-color': 'red' })
+          return false
+        } else {
+          $(this).css({ 'border': '0px solid' })
+        }
+      });
+
+      // allowSwip = true;
+
+      if (!allowSwip) {
+        e.preventDefault()
+      }
+    }
+
+  });
   sliderheight();
 }
 signupCardSwip()
 
 function newTripCardSwap() {
   $('.next-btn').click(function () {
-    const activeCard = $(".new-trip-page.active");
-    const currentCardNum = activeCard.index();
-    if (currentCardNum + 1 == 3) {
-      $('#next-btn').addClass('d-none');
-      $('#next-btn').removeClass('d-inline-block');
-      $('#submit-btn').removeClass('d-none');
-      $('#submit-btn').addClass('d-inline-block');
+    if ($(this).parents('#new-trip-form').length > 0) {
+      const activeCard = $(".new-trip-page.active");
+      const currentCardNum = activeCard.index();
+
+      var allowSwip = true;
+
+      activeCard.find('.new-trip-input').filter('[required]:visible').each(function (i) {
+
+        if ($(this).find('.places-wrapper').length > 0) {
+          if (!$(this).find('.places-wrapper').find('.place').length > 0) {
+            allowSwip = false
+          }
+        }
+        else {
+          if ($(this).val() == '') {
+            $(this).css({ 'border': '1px solid', 'border-color': 'red' })
+            allowSwip = false
+
+          }
+          if (!$(this).is(':valid')) {
+            allowSwip = false
+            console.log($(this).attr('placeholder'));
+          }
+        }
+
+
+
+        if (!allowSwip) {
+          $(this).css({ 'border': '1px solid', 'border-color': 'red' })
+          return false
+        } else {
+          $(this).css({ 'border': '0px solid' })
+        }
+
+
+      });
+
+
+      if (allowSwip) {
+        if (currentCardNum + 1 == 3) {
+          $('#next-btn').addClass('d-none');
+          $('#next-btn').removeClass('d-inline-block');
+          $('#submit-btn').removeClass('d-none');
+          $('#submit-btn').addClass('d-inline-block');
+        }
+
+        activeCard.removeClass('active')
+        activeCard.addClass('prev')
+
+        $('.new-trip-page').eq(currentCardNum + 1).removeClass('next')
+        $('.new-trip-page').eq(currentCardNum + 1).removeClass('prev')
+        $('.new-trip-page').eq(currentCardNum + 1).addClass('active')
+
+        var currentStep = $('.new-trip-page.active').attr('step');
+        $('.new-trip-tabs').find('.active').removeClass('active');
+        $(`#tab-${currentStep}`).addClass('active');
+        sliderheight2();
+        $('.current-step').empty()
+        $('.current-step').append(currentStep)
+      }
     }
-
-    activeCard.removeClass('active')
-    activeCard.addClass('prev')
-
-    $('.new-trip-page').eq(currentCardNum + 1).removeClass('next')
-    $('.new-trip-page').eq(currentCardNum + 1).removeClass('prev')
-    $('.new-trip-page').eq(currentCardNum + 1).addClass('active')
-
-    var currentStep = $('.new-trip-page.active').attr('step');
-    $('.new-trip-tabs').find('.active').removeClass('active');
-    $(`#tab-${currentStep}`).addClass('active');
-    sliderheight2();
-    $('.current-step').empty()
-    $('.current-step').append(currentStep)
   });
 
   $('.new-trip-tab').click(function () {
     const target = $(this).attr('step');
     const current = $('.new-trip-tab.active').attr('step');
-    $('.new-trip-tab.active').removeClass('active');
-    $(this).addClass('active');
 
-    $(`#page-${target}`).addClass('active');
-    $(`#page-${target}`).removeClass('next');
-    $(`#page-${target}`).removeClass('prev');
+    var allowSwip = true;
+    if (target > current) {
+      for (var i = parseInt(current), breakIt = false; i < parseInt(target) && !breakIt; i++) {
+        $(`#page-${i}`).find('.new-trip-input').filter('[required]:visible').each(function () {
 
-    $(`#page-${current}`).removeClass('active');
-    if (target < current) {
-      $(`#page-${current}`).addClass('next');
-    } else if (target > current) {
-      $(`#page-${current}`).addClass('prev');
+          if ($(this).find('.places-wrapper').length > 0) {
+            if (!$(this).find('.places-wrapper').find('.place').length > 0) {
+              allowSwip = false
+            }
+          }
+          else {
+            if ($(this).val() == '') {
+              $(this).css({ 'border': '1px solid', 'border-color': 'red' })
+              allowSwip = false
+
+            }
+            if (!$(this).is(':valid')) {
+              allowSwip = false
+              console.log($(this).attr('placeholder'));
+            }
+          }
+
+
+
+          if (!allowSwip) {
+            $(this).css({ 'border': '1px solid', 'border-color': 'red' })
+
+            $(`#tab-${i}`).click();
+            breakIt = true;
+            return false
+          } else {
+            $(this).css({ 'border': '0px solid' })
+          }
+        });
+      }
     }
 
-    const activeCard = $(".new-trip-page.active");
-    const currentCardNum = activeCard.index();
-    if (currentCardNum + 1 == 4) {
-      $('#next-btn').addClass('d-none');
-      $('#next-btn').removeClass('d-inline-block');
-      $('#submit-btn').removeClass('d-none');
-      $('#submit-btn').addClass('d-inline-block');
-    } else {
-      $('#submit-btn').addClass('d-none');
-      $('#submit-btn').removeClass('d-inline-block');
-      $('#next-btn').removeClass('d-none');
-      $('#next-btn').addClass('d-inline-block');
-    }
 
-    $('.current-step').empty()
-    $('.current-step').append(target)
+
+
+
+    if (allowSwip) {
+
+      $('.new-trip-tab.active').removeClass('active');
+      $(this).addClass('active');
+
+
+
+      $(`#page-${current}`).removeClass('active');
+      if (target < current) {
+        $(`#page-${current}`).addClass('next');
+      } else if (target > current) {
+        $(`#page-${current}`).addClass('prev');
+      }
+
+      $(`#page-${target}`).addClass('active');
+      $(`#page-${target}`).removeClass('next');
+      $(`#page-${target}`).removeClass('prev');
+      const activeCard = $(".new-trip-page.active");
+      const currentCardNum = activeCard.index();
+      if (currentCardNum + 1 == 4) {
+        $('#next-btn').addClass('d-none');
+        $('#next-btn').removeClass('d-inline-block');
+        $('#submit-btn').removeClass('d-none');
+        $('#submit-btn').addClass('d-inline-block');
+      } else {
+        $('#submit-btn').addClass('d-none');
+        $('#submit-btn').removeClass('d-inline-block');
+        $('#next-btn').removeClass('d-none');
+        $('#next-btn').addClass('d-inline-block');
+      }
+
+      $('.current-step').empty()
+      $('.current-step').append(target)
+    }
   });
+  $('#submit-btn').click(function (e) {
+    if ($(this).parents('#new-trip-form').length > 0) {
+      const activeCard = $(".new-trip-page.active");
 
+      var allowSubmit = true;
+
+      activeCard.find('.new-trip-input').filter('[required]:visible').each(function (i) {
+
+        if ($(this).hasClass('new-trip-photos-wrapper')) {
+
+          if (!$(this).find('.trip-photo-item').length > 0) {
+            alert('You have to add at least a photo for your trip');
+            allowSubmit = false
+          }
+        }
+
+
+
+        if (!allowSubmit) {
+          $(this).css({ 'border': '1px solid', 'border-color': 'red' })
+          return false
+          e.preventDefault()
+        } else {
+          $(this).css({ 'border': '0px solid' })
+        }
+
+
+      });
+
+
+
+    }
+  })
 
 }
 newTripCardSwap()
-
+$('#submit-btn').click(function (e) {
+  var form = $(this).parents('form');
+  if (!form.find('.page.active').is(form.find('.page:last-of-type'))) {
+    $(this).siblings('#next-btn').click();
+    e.preventDefault();
+  }
+})
 function fileInputChange() {
   $('.file-input').change(function () {
     var id = $(this).attr('id');
@@ -200,6 +373,7 @@ function fileInputChange() {
   })
 }
 fileInputChange()
+
 
 function setupGallery() {
   lc_lightbox('.gallery-elm', {
@@ -326,16 +500,16 @@ showPayment()
 
 
 function customSelect() {
-  
+
   var x, i, j, selElmnt, a, b, c;
   /* Look for any elements with the class "custom-select": */
-  
+
   x = document.getElementsByClassName("custom-select");
-  
+
   for (i = 0; i < x.length; i++) {
     selElmnt = x[i].getElementsByTagName("select")[0];
     /* For each element, create a new DIV that will act as the selected item: */
-    
+
     a = document.createElement("DIV");
     a.setAttribute("class", "select-selected");
     // a.setAttribute("class", "search-input");
@@ -371,7 +545,7 @@ function customSelect() {
     this.classList.toggle("select-arrow-active");
   }
 
-  
+
 
   function closeAllSelect(elmnt) {
     /* A function that will close all select boxes in the document,
@@ -420,13 +594,13 @@ function ClickChandeler(e) {
   }
   h.click();
 }
-function reloadCustomSelect(){
- var x = document.getElementsByClassName("custom-select");
-  
+function reloadCustomSelect() {
+  var x = document.getElementsByClassName("custom-select");
+
   for (i = 0; i < x.length; i++) {
-    var selElmnt = x[i].getElementsByTagName("select")[0];  
-    var selectMenu= x[i].getElementsByClassName("select-items")[0]
-    selectMenu.innerHTML='';
+    var selElmnt = x[i].getElementsByTagName("select")[0];
+    var selectMenu = x[i].getElementsByClassName("select-items")[0]
+    selectMenu.innerHTML = '';
     for (j = 1; j < selElmnt.length; j++) {
       /* For each option in the original select element,
       create a new DIV that will act as an option item: */
@@ -434,16 +608,16 @@ function reloadCustomSelect(){
       c.innerHTML = selElmnt.options[j].innerHTML;
       c.removeEventListener('click', ClickChandeler);
       c.addEventListener("click", ClickChandeler);
-      
+
       selectMenu.appendChild(c);
     }
-    
+
   }
 
 }
 
 $('.select-items').click(function () {
-  
+
   reloadCustomSelect()
-  
+
 });
