@@ -9,6 +9,14 @@
                 &:hover
                     background-color: rgba(gray,1)
                 .destination-img-holder
+                    position: relative
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 100%
+                    height: 200px
+                    overflow: hidden
+                    background-color: rgba($lightGray,0.6)
                     .destination-img
                         width: 100%
                 .destination-text
@@ -28,42 +36,50 @@
         .descriptions-wrapper
             .destination
                 .destination-link
-                        .destination-text
-                            .name
-                                font-size: 20px
-                            .description
-                                font-size: 13px
+                    .destination-img-holder
+                        height: 150px
+                    .destination-text
+                        .name
+                            font-size: 20px
+                        .description
+                            font-size: 13px
 @media (max-width: 1350px)
     #Destinations
         .descriptions-wrapper
             .destination
                 .destination-link
-                        .destination-text
-                            .name
-                                font-size: 18px
-                            .description
-                                font-size: 11px
+                    .destination-img-holder
+                        height: 120px 
+                    .destination-text
+                        .name
+                            font-size: 18px
+                        .description
+                            font-size: 11px
 
 @media (max-width: 1235px)
     #Destinations
         .descriptions-wrapper
             .destination
                 .destination-link
-                        .destination-text
-                            .name
-                                font-size: 15px
-                            .description
-                                font-size: 11px
+                    .destination-img-holder
+                        height: 100px 
+                    .destination-text
+                        .name
+                            font-size: 15px
+                        .description
+                            font-size: 11px
 @media (max-width: 991px)
     #Destinations
         .descriptions-wrapper
             .destination
                 .destination-link
-                        .destination-text
-                            .name
-                                font-size: 18px
-                            .description
-                                font-size: 11px
+                    .destination-img-holder
+                        height: 150px 
+                    .destination-text
+                        .name
+                            font-size: 18px
+                        .description
+                            font-size: 11px
     #country-labels
         text-align: center
         .country-labels-wrapper
@@ -103,11 +119,13 @@
         .descriptions-wrapper
             .destination
                 .destination-link
-                        .destination-text
-                            .name
-                                font-size: 15px
-                            .description
-                                font-size: 11px
+                    .destination-img-holder
+                        height: 120px 
+                    .destination-text
+                        .name
+                            font-size: 15px
+                        .description
+                            font-size: 11px
     #country-labels
         margin-top: -32px
         .country-labels-wrapper

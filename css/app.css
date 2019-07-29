@@ -11131,6 +11131,16 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 #Destinations .descriptions-wrapper .destination .destination-link:hover {
   background-color: gray;
 }
+#Destinations .descriptions-wrapper .destination .destination-link .destination-img-holder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: rgba(112, 112, 112, 0.6);
+}
 #Destinations .descriptions-wrapper .destination .destination-link .destination-img-holder .destination-img {
   width: 100%;
 }
@@ -11149,6 +11159,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 }
 
 @media (max-width: 1600px) {
+  #Destinations .descriptions-wrapper .destination .destination-link .destination-img-holder {
+    height: 150px;
+  }
   #Destinations .descriptions-wrapper .destination .destination-link .destination-text .name {
     font-size: 20px;
   }
@@ -11157,6 +11170,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   }
 }
 @media (max-width: 1350px) {
+  #Destinations .descriptions-wrapper .destination .destination-link .destination-img-holder {
+    height: 120px;
+  }
   #Destinations .descriptions-wrapper .destination .destination-link .destination-text .name {
     font-size: 18px;
   }
@@ -11165,6 +11181,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   }
 }
 @media (max-width: 1235px) {
+  #Destinations .descriptions-wrapper .destination .destination-link .destination-img-holder {
+    height: 100px;
+  }
   #Destinations .descriptions-wrapper .destination .destination-link .destination-text .name {
     font-size: 15px;
   }
@@ -11173,6 +11192,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   }
 }
 @media (max-width: 991px) {
+  #Destinations .descriptions-wrapper .destination .destination-link .destination-img-holder {
+    height: 150px;
+  }
   #Destinations .descriptions-wrapper .destination .destination-link .destination-text .name {
     font-size: 18px;
   }
@@ -11222,6 +11244,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   }
 }
 @media (max-width: 395px) {
+  #Destinations .descriptions-wrapper .destination .destination-link .destination-img-holder {
+    height: 120px;
+  }
   #Destinations .descriptions-wrapper .destination .destination-link .destination-text .name {
     font-size: 15px;
   }
