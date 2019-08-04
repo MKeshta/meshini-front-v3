@@ -184,17 +184,17 @@ $(document).ready(function () {
 
         activeCard.find('.new-trip-input').filter('[required]:visible').each(function (i) {
 
-          
-            if ($(this).val() == '' || $(this).val() ==null) {
-              $(this).css({ 'border': '1px solid', 'border-color': 'red' })
-              allowSwip = false
 
-            }
-            if (!$(this).is(':valid')) {
-              allowSwip = false
-              console.log($(this).attr('placeholder'));
-            }
-          
+          if ($(this).val() == '' || $(this).val() == null) {
+            $(this).css({ 'border': '1px solid', 'border-color': 'red' })
+            allowSwip = false
+
+          }
+          if (!$(this).is(':valid')) {
+            allowSwip = false
+            console.log($(this).attr('placeholder'));
+          }
+
 
 
 
@@ -255,7 +255,7 @@ $(document).ready(function () {
               // }
               // else {
 
-              if ($(this).val() == '' || $(this).val()==null) {
+              if ($(this).val() == '' || $(this).val() == null) {
                 $(this).css({ 'border': '1px solid', 'border-color': 'red' })
                 allowSwip = false
 
@@ -637,7 +637,7 @@ $(document).ready(function () {
         if (parentPage.find('.select-items:not(.select-hide)').length > 0) {
           var openedMenu = parentPage.find('.select-items:not(.select-hide)')
           if ((parentPage.offset().top + parentPage.outerHeight(true)) < (openedMenu.offset().top + openedMenu.outerHeight(true))) {
-            parentPage.css({ 'min-height': (parentPage.height() + openedMenu.outerHeight(true) - 50) + 'px' });
+            parentPage.css({ 'min-height': (parentPage.height() + openedMenu.outerHeight(true) - 72) + 'px' });
             sliderheight2();
           }
         }
@@ -654,7 +654,7 @@ $(document).ready(function () {
     $('.city-select').siblings('.select-items').unbind();
     $('.city-select').siblings('.select-items').click(function () {
       //city changed
-      var select=$(this).siblings('.city-select')
+      var select = $(this).siblings('.city-select')
       alert(select.val())
     });
     $('.add-country-btn').unbind();
@@ -662,6 +662,9 @@ $(document).ready(function () {
 
       var allow_add = true;
       var lastIndex = 0
+
+
+      //adding new city select
       $('.palces-input-container').find('.place-wrapper').each(function (i) {
         lastIndex = i;
         $(this).find('select').each(function (j) {
