@@ -12388,10 +12388,6 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page.next * {
   display: none;
 }
-#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .places-citation {
-  color: #243666;
-  font-weight: 600;
-}
 #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper {
   position: relative;
   margin-bottom: 2rem;
@@ -12423,27 +12419,6 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   height: 45px;
   border-radius: 40px;
   margin: 0 auto;
-}
-#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input .places-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input .places-wrapper .place {
-  border: 1px solid #707070;
-  border-radius: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #707070;
-  margin: 0.5rem 0.75rem 0.5rem 0.75rem;
-}
-#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input .places-wrapper .place .close {
-  display: inline-block;
-  margin-left: 10px;
-  cursor: pointer;
-}
-#pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper .new-trip-input .places-wrapper .place .close img {
-  width: 10px;
 }
 #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .add-country-btn-wrapper {
   text-align: center;
@@ -12515,9 +12490,6 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   }
 }
 @media (max-width: 768px) {
-  #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .places-citation {
-    font-size: 13px;
-  }
   #pills-New-trips #new-trip-form .new-trip-pages-wrapper .new-trip-page .trip-input-wrapper {
     margin-bottom: 1rem;
   }

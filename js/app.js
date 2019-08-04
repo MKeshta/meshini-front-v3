@@ -246,10 +246,11 @@ $(document).ready(function () {
       var allowSwip = true;
       if (target > current) {
         for (var i = parseInt(current), breakIt = false; i < parseInt(target) && !breakIt; i++) {
+           $(`#page-${i}`).find('*').addClass('d-block')
           if ( $(`#page-${i}`).find('.new-trip-input').length>0) {
             
-            if ( $(`#page-${i}`).find('.new-trip-input').filter('[required]:visible').length>0)
-              alert(i)
+           
+              
             $(`#page-${i}`).find('.new-trip-input').filter('[required]:visible').each(function () {
 
               // if ($(this).find('.places-wrapper').length > 0) {
@@ -283,7 +284,7 @@ $(document).ready(function () {
               }
             });
           }
-          alert
+          $(`#page-${i}`).find('*').removeClass('d-block')
         }
       }
 
@@ -653,7 +654,6 @@ $(document).ready(function () {
   function newTriPlaces() {
     $('#trip-country-input').change(function () {
       //country changed
-      alert($(this).val())
     });
 
 
