@@ -9655,10 +9655,6 @@ h3 {
     border-color: #dee2e6;
   }
 }
-* {
-  box-sizing: border-box;
-}
-
 body, html {
   margin: 0;
   padding: 0;
@@ -12080,6 +12076,10 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 }
 #company-profile .company-work-details-wrapper .content-wrapper .tabs-wrapper .tab-content .tab-pane .cards-wrapper .col-6 .white-card {
   width: 100%;
+}
+
+#page-2 .select-selected {
+  padding-left: 45px;
 }
 
 @media (max-width: 1145px) {

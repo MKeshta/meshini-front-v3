@@ -1124,7 +1124,7 @@
                                     </li>
                                 </ul>
 
-                                <form id='new-trip-form'   action="" method="POST">
+                                <form id='new-trip-form' action="" method="POST">
                                     <div class="new-trip-pages-wrapper pages-wrapper my-sm-4 my-3">
                                         <div class="new-trip-page page active " id='page-1' step=1>
                                             <div class="container">
@@ -1171,17 +1171,6 @@
                                                     <div class="col-md-6 col-12">
                                                         <div class="trip-input-wrapper">
                                                             <label class="input-icon"><img
-                                                                    src='../images/input-icons/bed.png'></label>
-                                                            <select class="new-trip-input" required name='room-type'>
-                                                                <option value='single'>Single Room</option>
-                                                                <option value='double'>Double Room</option>
-                                                                <option value='triple'>Triple Room</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-12">
-                                                        <div class="trip-input-wrapper">
-                                                            <label class="input-icon"><img
                                                                     src='../images/input-icons/breakfast.png'></label>
                                                             <input class="new-trip-input" required type='text'
                                                                 name='meals' placeholder="Meals">
@@ -1201,6 +1190,21 @@
                                                                     src='../images/input-icons/solid--car-seat.png'></label>
                                                             <input class="new-trip-input" required type="number" min="1"
                                                                 name='seats-number' placeholder="Number Of Seats">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="trip-input-wrapper">
+                                                            <label class="input-icon"><img
+                                                                    src='../images/input-icons/bed.png'></label>
+                                                            <select class="new-trip-input" id='trip-country-input'
+                                                                required name='room-type'>
+                                                                <option value="" disabled selected>Country
+                                                                </option>
+                                                                <option value="1">Audi</option>
+                                                                <option value="2">BMW</option>
+                                                                <option value="3">Citroen</option>
+                                                                <option value="4">Ford</option>
+                                                            </select>
                                                         </div>
                                                     </div>
 
@@ -1234,24 +1238,41 @@
                                         </div>
                                         <div class="new-trip-page page next " id='page-2' step=2>
                                             <div class="container">
-                                                <div class="row mx-0">
-                                                    <div class="col-md-6 col-12">
-                                                        <div class="trip-input-wrapper">
-                                                            <label class="input-icon"><img
-                                                                    src='../images/input-icons/placeholder.png'></label>
-                                                            <input class="new-trip-input"  type='text'
-                                                                name='country' placeholder="Country">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-12">
-                                                        <div class="trip-input-wrapper">
-                                                            <label class="input-icon"><img
-                                                                    src='../images/input-icons/placeholder.png'></label>
-                                                            <input class="new-trip-input"  type='text'
-                                                                name='city' placeholder="City">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
+                                                <div class="palces-input-container">
+                                                    <div class="place-wrapper">
+                                                        <div class="row mx-0">
+                                                            <div class="col-md-6 col-12">
+                                                                <div class="trip-input-wrapper">
+                                                                    <label class="input-icon"><img
+                                                                            src='../images/input-icons/placeholder.png'></label>
+                                                                    <div class="custom-select">
+                                                                        <select name="city-0" required>
+                                                                            <option value="0" disabled selected>Country
+                                                                            </option>
+                                                                            <option value="1">Audi</option>
+                                                                            <option value="2">BMW</option>
+                                                                            <option value="3">Citroen</option>
+                                                                            <option value="4">Ford</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-12">
+                                                                <div class="trip-input-wrapper">
+                                                                    <label class="input-icon"><img
+                                                                            src='../images/input-icons/placeholder.png'></label>
+                                                                    <div class="custom-select">
+                                                                        <select name="place-0" required>
+                                                                            <option value="0" disabled selected>city
+                                                                            </option>
+                                                                            <option value="1">Audi</option>
+                                                                            <option value="2">BMW</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- <div class="col-12">
                                                         <div class="trip-input-wrapper mb-0">
                                                             <label class="input-icon"><img
                                                                     src='../images/input-icons/destination.png'></label>
@@ -1277,6 +1298,8 @@
                                                         <span class="places-citation">Places you enter first
                                                             appears first in
                                                             the program digram</span>
+                                                    </div> -->
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="add-country-btn-wrapper">
