@@ -10627,8 +10627,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
 }
 
 .custom-select select {
-  display: none;
+  transform: scale(0);
   /*hide original SELECT element: */
+  position: absolute;
 }
 
 .select-selected {

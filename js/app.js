@@ -184,13 +184,8 @@ $(document).ready(function () {
 
         activeCard.find('.new-trip-input').filter('[required]:visible').each(function (i) {
 
-          if ($(this).find('.places-wrapper').length > 0) {
-            if (!$(this).find('.places-wrapper').find('.place').length > 0) {
-              allowSwip = false
-            }
-          }
-          else {
-            if ($(this).val() == '') {
+          
+            if ($(this).val() == '' || $(this).val() ==null) {
               $(this).css({ 'border': '1px solid', 'border-color': 'red' })
               allowSwip = false
 
@@ -199,7 +194,7 @@ $(document).ready(function () {
               allowSwip = false
               console.log($(this).attr('placeholder'));
             }
-          }
+          
 
 
 
@@ -246,11 +241,11 @@ $(document).ready(function () {
       var allowSwip = true;
       if (target > current) {
         for (var i = parseInt(current), breakIt = false; i < parseInt(target) && !breakIt; i++) {
-           $(`#page-${i}`).find('*').addClass('d-block')
-          if ( $(`#page-${i}`).find('.new-trip-input').length>0) {
-            
-           
-              
+          $(`#page-${i}`).find('*').addClass('d-block')
+          if ($(`#page-${i}`).find('.new-trip-input').length > 0) {
+
+
+
             $(`#page-${i}`).find('.new-trip-input').filter('[required]:visible').each(function () {
 
               // if ($(this).find('.places-wrapper').length > 0) {
@@ -260,7 +255,7 @@ $(document).ready(function () {
               // }
               // else {
 
-              if ($(this).val() == '') {
+              if ($(this).val() == '' || $(this).val()==null) {
                 $(this).css({ 'border': '1px solid', 'border-color': 'red' })
                 allowSwip = false
 
@@ -272,7 +267,7 @@ $(document).ready(function () {
               // }
 
 
-             
+
               if (!allowSwip) {
                 $(this).css({ 'border': '1px solid', 'border-color': 'red' })
 
@@ -652,11 +647,17 @@ $(document).ready(function () {
   resizePageOndropDown()
 
   function newTriPlaces() {
+    $('#trip-country-input').unbind();
     $('#trip-country-input').change(function () {
       //country changed
     });
-
-
+    $('.city-select').siblings('.select-items').unbind();
+    $('.city-select').siblings('.select-items').click(function () {
+      //city changed
+      var select=$(this).siblings('.city-select')
+      alert(select.val())
+    });
+    $('.add-country-btn').unbind();
     $('.add-country-btn').click(function () {
 
       var allow_add = true;
@@ -681,7 +682,7 @@ $(document).ready(function () {
                       <label class="input-icon"><img
                               src='../images/input-icons/placeholder.png'></label>
                       <div class="custom-select">
-                          <select name="city-${lastIndex + 1}" required>
+                          <select name="city-${lastIndex + 1}" class="new-trip-input city-select" required>
                               <option value="0" disabled selected>Country
                               </option>
                               <option value="1">Audi</option>
@@ -698,7 +699,7 @@ $(document).ready(function () {
                       <label class="input-icon"><img
                               src='../images/input-icons/placeholder.png'></label>
                       <div class="custom-select">
-                          <select name="place" required>
+                          <select name="place-${lastIndex + 1}" class="new-trip-input place-select" required>
                               <option value="0" disabled selected>city
                               </option>
                               <option value="1">Audi</option>
@@ -741,6 +742,7 @@ $(document).ready(function () {
         customSelect()
         sliderheight2();
         resizePageOndropDown()
+        newTriPlaces()
       }
     });
   }
