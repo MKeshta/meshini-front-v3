@@ -243,17 +243,7 @@ $(document).ready(function () {
         for (var i = parseInt(current), breakIt = false; i < parseInt(target) && !breakIt; i++) {
           $(`#page-${i}`).find('*').addClass('d-block')
           if ($(`#page-${i}`).find('.new-trip-input').length > 0) {
-
-
-
-            $(`#page-${i}`).find('.new-trip-input').filter('[required]:visible').each(function () {
-
-              // if ($(this).find('.places-wrapper').length > 0) {
-              //   if (!$(this).find('.places-wrapper').find('.place').length > 0) {
-              //     allowSwip = false
-              //   }
-              // }
-              // else {
+             $(`#page-${i}`).find('.new-trip-input').filter('[required]:visible').each(function () {
 
               if ($(this).val() == '' || $(this).val() == null) {
                 $(this).css({ 'border': '1px solid', 'border-color': 'red' })
@@ -264,7 +254,7 @@ $(document).ready(function () {
                 allowSwip = false
                 console.log($(this).attr('placeholder'));
               }
-              // }
+              
 
 
 
@@ -623,11 +613,7 @@ $(document).ready(function () {
 
   }
 
-  $('.select-items').click(function () {
-
-    reloadCustomSelect()
-
-  });
+  
 
   function resizePageOndropDown() {
     $('.select-selected').click(function () {
@@ -647,12 +633,18 @@ $(document).ready(function () {
   resizePageOndropDown()
 
   function newTriPlaces() {
+
+    $('.select-items').unbind()
+      
+
     $('#trip-country-input').unbind();
     $('#trip-country-input').change(function () {
+      reloadCustomSelect()
       //country changed
     });
     $('.city-select').siblings('.select-items').unbind();
     $('.city-select').siblings('.select-items').click(function () {
+      reloadCustomSelect()
       //city changed
       var select = $(this).siblings('.city-select')
       alert(select.val())
@@ -663,6 +655,7 @@ $(document).ready(function () {
       var allow_add = true;
       var lastIndex = 0
 
+      
 
       //adding new city select
       $('.palces-input-container').find('.place-wrapper').each(function (i) {
@@ -747,8 +740,14 @@ $(document).ready(function () {
         resizePageOndropDown()
         newTriPlaces()
       }
+
     });
   }
   newTriPlaces()
+
+});
+$('.select-items').click(function () {
+
+  reloadCustomSelect()
 
 });
