@@ -243,7 +243,7 @@ $(document).ready(function () {
         for (var i = parseInt(current), breakIt = false; i < parseInt(target) && !breakIt; i++) {
           $(`#page-${i}`).find('*').addClass('d-block')
           if ($(`#page-${i}`).find('.new-trip-input').length > 0) {
-             $(`#page-${i}`).find('.new-trip-input').filter('[required]:visible').each(function () {
+            $(`#page-${i}`).find('.new-trip-input').filter('[required]:visible').each(function () {
 
               if ($(this).val() == '' || $(this).val() == null) {
                 $(this).css({ 'border': '1px solid', 'border-color': 'red' })
@@ -254,7 +254,7 @@ $(document).ready(function () {
                 allowSwip = false
                 console.log($(this).attr('placeholder'));
               }
-              
+
 
 
 
@@ -613,7 +613,7 @@ $(document).ready(function () {
 
   }
 
-  
+
 
   function resizePageOndropDown() {
     $('.select-selected').click(function () {
@@ -635,7 +635,7 @@ $(document).ready(function () {
   function newTriPlaces() {
 
     $('.select-items').unbind()
-      
+
 
     $('#trip-country-input').unbind();
     $('#trip-country-input').change(function () {
@@ -655,7 +655,7 @@ $(document).ready(function () {
       var allow_add = true;
       var lastIndex = 0
 
-      
+
 
       //adding new city select
       $('.palces-input-container').find('.place-wrapper').each(function (i) {
@@ -671,6 +671,7 @@ $(document).ready(function () {
 
       if (allow_add) {
         $('.palces-input-container').append(`
+        <hr/>
         <div class="place-wrapper">
           <div class="row mx-0">
               <div class="col-md-6 col-12">

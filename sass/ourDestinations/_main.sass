@@ -33,8 +33,18 @@
                     transition: 300ms
                     &:hover
                         background-color: rgba(gray,0.05)
-                .country-img
-                    width: 100%
+                    .country-img-cell
+                        
+                        height: 110px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        overflow: hidden
+                        overflow-x: hidden
+                        
+                        .country-img
+                            width: 100%
+                            min-height: 100%
                 .country-info
                     color: $darkBlue
                     .name
@@ -65,9 +75,40 @@
                 padding-bottom: 0.5rem
                 white-space: nowrap
 
+@media (max-width: 1500px)
+    #ourDestination
+        .countries-section
+            .country-section
+                .country-link 
+                    .country-wrapper
+                        .country-img-cell
+                            height: 90px
+
+@media (max-width: 1275px)
+    #ourDestination
+        .countries-section
+            .country-section
+                .country-link 
+                    .country-wrapper
+                        .country-img-cell
+                            height: 80px
+@media (max-width: 1198px)
+    #ourDestination
+        .countries-section
+            .country-section
+                .country-link 
+                    .country-wrapper
+                        .country-img-cell
+                            height: 130px
+
 @media (max-width: 1050px)
     #ourDestination
         .countries-section
+            .country-section
+                .country-link 
+                    .country-wrapper
+                        .country-img-cell
+                            height: 110px
             .show-more-cell
                 .btn-darkBlue
                     margin-top: 5px
@@ -83,8 +124,10 @@
     #ourDestination
         .countries-section
             .country-section
-                .country-link
+                .country-link 
                     .country-wrapper
+                        .country-img-cell
+                            height: 90px
                         .country-info
                             .name
                                 font-size: 23px
@@ -113,6 +156,11 @@
 @media (max-width: 767px)
     #ourDestination
         .countries-section
+            .country-section
+                .country-link 
+                    .country-wrapper
+                        .country-img-cell
+                            height: 145px
             .show-more-cell
                 .btn-darkBlue
                     text-align: center
@@ -126,7 +174,7 @@
                     font-size: 14px
 
 
-        
+    
 @media (max-width: 700px)
     #ourDestination
         .countries-section
@@ -142,13 +190,23 @@
                                 span
                                     width: 17px
                                     padding-right: 3px 
-                            
+
+@media (max-width: 560px)
+    #ourDestination
+        .countries-section
+            .country-section
+                .country-link 
+                    .country-wrapper
+                        .country-img-cell
+                            height: 120px                             
 @media (max-width: 460px)
     #ourDestination
         .countries-section
             .country-section
-                .country-link
+                .country-link 
                     .country-wrapper
+                        .country-img-cell
+                            height: 100px  
                         .country-info
                             .name
                                 font-size: 17px
@@ -160,11 +218,13 @@
                                     padding-right: 0.1px 
 
 @media (max-width: 389px)
-    #ourDestination
+   #ourDestination
         .countries-section
             .country-section
-                .country-link
+                .country-link 
                     .country-wrapper
+                        .country-img-cell
+                            height: 90px  
                         .country-info
                             .name
                                 font-size: 15px
@@ -175,4 +235,11 @@
                                     width: 14px
                                     padding-right: 0.1px 
                             
-                        
+@media (max-width: 350px)
+   #ourDestination
+        .countries-section
+            .country-section
+                .country-link 
+                    .country-wrapper
+                        .country-img-cell
+                            height: 80px  
