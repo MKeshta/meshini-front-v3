@@ -10965,6 +10965,9 @@ main .bg-beach .content-wrapper .bluered-card .card-content .btn-white-outline:a
   height: 100%;
   background: radial-gradient(circle, #eee5e3 0%, #bfbfbf 100%);
 }
+#local-expert .local-expert-wrapper .local-expert-section .bg-gradient .py-4 {
+  width: 100%;
+}
 #local-expert .local-expert-wrapper .local-expert-section .bg-gradient .header {
   font-size: 30px;
   font-weight: bold;
